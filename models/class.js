@@ -8,6 +8,15 @@ module.exports = function (sequelize, DataTypes) {
         //     defaultValue: DataTypes.UUIDV4
         // },
 
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
+
+        },
+
         points: {
             type: DataTypes.INTEGER
         }
