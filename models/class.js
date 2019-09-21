@@ -22,21 +22,21 @@ module.exports = function (sequelize, DataTypes) {
         }
     });
 
-    Class.associate = function (models) {
-        Class.belongsTo(models.Teacher, {
-            foreignKey: {
-                allowNull: false
-            }
-        })
-    }
+    // Class.associate = function (models) {
+    //     Class.hasMany(models.Teacher, {
+    //         foreignKey: {
+    //             allowNull: false
+    //         }
+    //     })
+    // }
     
-    Class.associate = function (models) {
-        Class.belongsTo(models.Student, {
-            foreignKey: {
-                allowNull: false
-            }
-        })
-    } 
+    // Class.associate = function (models) {
+    //     Class.hasMany(models.Student, {
+    //         foreignKey: {
+    //             allowNull: false
+    //         }
+    //     })
+    // } 
     
     return Class;
 };

@@ -16,7 +16,7 @@ export default class Student extends Component {
     componentDidMount = () => {
         Axios.get("/api/students/").then(response => {
             let oldState = this.state
-            oldState.students = response.data;
+            oldState.students = response;
             this.setState(oldState)
         }).catch(err => {
             console.log(err);
