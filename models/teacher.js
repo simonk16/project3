@@ -2,7 +2,7 @@ module.exports = function(sequelize, DataTypes) {
     var Teacher = sequelize.define("Teacher", {
       // Giving the Author model a name of type STRING
       firstName: {
-          type: DataTypes.String,
+          type: DataTypes.STRING,
           allowNull: false,
           validate: {
               len: [1]
@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
       },
 
       lastName: {
-          type: DataTypes.String,
+          type: DataTypes.STRING,
           allowNull: false,
           validate: {
               len: [1]

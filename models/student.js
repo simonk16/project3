@@ -18,7 +18,7 @@ module.exports = function (sequalize, DataTypes) {
     });
 
     Student.associate = function (models) {
-        Student.hasMany(model.Class, {
+        Student.hasMany(models.Class, {
             onDelete: "cascade"
         });
     };
