@@ -14,7 +14,7 @@ module.exports = function (sequelize, DataTypes) {
     });
 
     Class.associate = function (models) {
-        Class.belongsTo(models.teacher, {
+        Class.belongsTo(models.Teacher, {
             foreignKey: {
                 allowNull: false
             }
@@ -22,12 +22,12 @@ module.exports = function (sequelize, DataTypes) {
     }
     
     Class.associate = function (models) {
-        Class.belongsTo(models.student, {
+        Class.belongsTo(models.Student, {
             foreignKey: {
                 allowNull: false
             }
         })
     } 
-    //ADD ASSOCIATIONS HERE IF NEEDED!
+    
     return Class;
 };
