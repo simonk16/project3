@@ -1,17 +1,33 @@
 module.exports = function (sequelize, DataTypes) {
+
     const Class = sequelize.define("Class", {
-        teachersID: {
-            type: DataTypes.INTEGER,
-            allowNull: false
+
+        id: {
+            type: DataTypes.UUID,
+            primaryKey: true,
+            defaultValue: DataTypes.UUIDV4
         },
-        studentsID: {
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
+
         points: {
             type: DataTypes.INTEGER
         }
     });
+
+    Class.associate = function (models) {
+        Class.belongsTo(models.teacher, {
+            foreignKey: {
+                allowNull: false
+            }
+        })
+    }
+    
+    Class.associate = function (models) {
+        Class.belongsTo(models.student, {
+            foreignKey: {
+                allowNull: false
+            }
+        })
+    } 
     //ADD ASSOCIATIONS HERE IF NEEDED!
     return Class;
 };
