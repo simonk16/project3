@@ -6,7 +6,7 @@ import Student from './components/Student';
 function App() {
   return (
     <div>Students
-      <Student/>
+      
     </div>
   );
   
