@@ -1,3 +1,5 @@
+
+
 module.exports = function (sequelize, DataTypes) {
     const Student = sequelize.define("Student", {
       firstName: {
