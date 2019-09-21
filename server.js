@@ -23,11 +23,10 @@ app.use(express.static("public"));
 // clearing the testdb
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync().then(function () {
     app.listen(PORT, function () {
         console.log(`\u{1F30E}==> Listening on port ${PORT}`);
     });
-}).catch(function(err){
-    console.log(err);
-});
+
+
+db.sequelize.sync()
 module.exports = app;
