@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "pq3egqnhipvacqft",
-    "password": "sbj2pfj7fc5wfhes",
-    "database": "is28fx6hqmjqq2tk",
-    "host": "s9xpbd61ok2i7drv.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "root",
+    "password": "Burbank!123",
+    "database": "test_db",
+    "host": "localhost",
     "dialect": "mysql"
    
   },

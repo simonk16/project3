@@ -1,11 +1,11 @@
-let Student = require("../models/Student");
-let Class = require("../models/Class");
-let Teacher = require("../models/Teacher");
+let db = require("../models");
+
+
 
 
 module.exports = function (app) {
     app.get("/api/students/", function (req, res) {
-        Student.findAll({}).then(function(dbStudent){
+        db.Student.findAll({}).then(function(dbStudent){
 
         }) 
     })
