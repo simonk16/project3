@@ -1,11 +1,11 @@
 module.exports = function(sequelize, DataTypes) {
     var Teacher = sequelize.define("Teacher", {
 
-      id: {
-        type: DataTypes.UUID,
-        primaryKey: true,
-        defaultValue: DataTypes.UUIDV4
-      },
+      // id: {
+      //   type: DataTypes.UUID,
+      //   primaryKey: true,
+      //   defaultValue: DataTypes.UUIDV4
+      // },
 
       firstName: {
           type: DataTypes.STRING,
@@ -27,8 +27,10 @@ module.exports = function(sequelize, DataTypes) {
     Teacher.associate = function(models) {
       // Associating Author with Posts
       // When an Author is deleted, also delete any associated Posts
-      Teacher.hasMany(models.Class, {
-        onDelete: "cascade"
+      Teacher.belongsToMany(models.Class, {
+        through: "AllData",
+        as: "Class",
+        foreignKey: "classId"        
       });
     };
   

@@ -2,11 +2,11 @@ module.exports = function (sequelize, DataTypes) {
 
     const Class = sequelize.define("Class", {
 
-        id: {
-            type: DataTypes.UUID,
-            primaryKey: true,
-            defaultValue: DataTypes.UUIDV4
-        },
+        // id: {
+        //     type: DataTypes.UUID,
+        //     primaryKey: true,
+        //     defaultValue: DataTypes.UUIDV4
+        // },
 
         name: {
             type: DataTypes.STRING,
@@ -23,18 +23,23 @@ module.exports = function (sequelize, DataTypes) {
     });
 
     Class.associate = function (models) {
-        Class.belongsTo(models.Teacher, {
-            foreignKey: {
-                allowNull: false
-            }
+        Class.belongsToMany(models.Teacher, {
+
+            through: 'AllData',
+            as: 'Teacher',
+            foreignKey: 'teacherId'
+
         })
     }
     
     Class.associate = function (models) {
-        Class.belongsTo(models.Student, {
-            foreignKey: {
-                allowNull: false
-            }
+        Class.belongsToMany(models.Student, {
+
+            through: 'AllData',
+            as: 'Student',
+            foreignKey: 'studentId'
+
+
         })
     } 
     
