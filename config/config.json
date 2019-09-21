@@ -3,9 +3,9 @@
     "username": "pq3egqnhipvacqft",
     "password": "sbj2pfj7fc5wfhes",
     "database": "is28fx6hqmjqq2tk",
-    "host": "http://s9xpbd61ok2i7drv.cbetxkdyhwsb.us-east-1.rds.amazonaws.com/",
-    "dialect": "mysql",
-    "operatorsAliases": false
+    "host": "s9xpbd61ok2i7drv.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
+   
   },
   "test": {
     "username": "root",
