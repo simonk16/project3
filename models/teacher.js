@@ -1,6 +1,12 @@
 module.exports = function(sequelize, DataTypes) {
     var Teacher = sequelize.define("Teacher", {
-      // Giving the Author model a name of type STRING
+
+      id: {
+        type: DataTypes.UUID,
+        primaryKey: true,
+        defaultValue: DataTypes.UUIDV4
+      },
+
       firstName: {
           type: DataTypes.STRING,
           allowNull: false,
