@@ -1,5 +1,5 @@
-module.exports = function (sequalize, DataTypes) {
-    const Student = sequalize.define("Student", {
+module.exports = function (sequelize, DataTypes) {
+    const Student = sequelize.define("Student", {
       firstName: {
         type: DataTypes.STRING,
         allowNull: false,

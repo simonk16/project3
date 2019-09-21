@@ -1,10 +1,10 @@
-module.exports = function (sequalize, DataTypes) {
-    const Class = sequalize.define("Class", {
-        teacherID: {
+module.exports = function (sequelize, DataTypes) {
+    const Class = sequelize.define("Class", {
+        teachersID: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        studentID: {
+        studentsID: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
