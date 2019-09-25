@@ -34,20 +34,27 @@ class SignIn extends Component {
               <Input
                 value={this.state.title}
                 onChange={this.handleInputChange}
-                name="title"
-                placeholder="Title (required)"
+                name="firstName"
+                placeholder="First Name (required)"
               />
               <Input
                 value={this.state.author}
                 onChange={this.handleInputChange}
-                name="author"
-                placeholder="Author (required)"
+                name="lastName"
+                placeholder="Last Name (required)"
               />
-              <TextArea
-                value={this.state.synopsis}
+              <Input
+                value={this.state.title}
                 onChange={this.handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
+                type="radio"
+                name="title"
+                placeholder="Student or Teacher (required)"
+              />
+              <Input
+                value={this.state.title}
+                onChange={this.handleInputChange}
+                name="title"
+                placeholder="What is your class? (required)"
               />
               <FormBtn
                 disabled={!(this.state.author && this.state.title)}
