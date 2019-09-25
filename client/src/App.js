@@ -1,12 +1,17 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Student from './components/Student';
+import Jumbotron from "./components/Jumbotron";
+import Footer from "./components/Footer";
+import TProfile from './pages/Teacher/TProfile';
 
 function App() {
   return (
-    <div>Students
-      
+    <div>
+      <Jumbotron>
+      <TProfile />
+      </Jumbotron>
+      <Footer />
     </div>
   );
   
