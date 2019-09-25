@@ -1,11 +1,11 @@
 module.exports = function (sequelize, DataTypes) {
     const Student = sequelize.define("Student", {
         
-      id: {
-          type: DataTypes.UUID,
-          primaryKey: true,
-          defaultValue: DataTypes.UUIDV4
-      },
+    //   id: {
+    //       type: DataTypes.UUID,
+    //       primaryKey: true,
+    //       defaultValue: DataTypes.UUIDV4
+    //   },
       
       firstName: {
         type: DataTypes.STRING,
