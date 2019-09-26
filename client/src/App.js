@@ -5,7 +5,7 @@ import Student from './components/Student';
 
 function App() {
   return (
-    <div>Students
+    <div>Hi Nancy I'm going to miss you
       
     </div>
   );
