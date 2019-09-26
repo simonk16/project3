@@ -28,9 +28,7 @@ module.exports = function(sequelize, DataTypes) {
       // Associating Author with Posts
       // When an Author is deleted, also delete any associated Posts
       Teacher.belongsToMany(models.Class, {
-        through: "AllData",
-        as: "Class",
-        foreignKey: "classId"        
+        foreignKey: "teacherId"        
       });
     };
   
