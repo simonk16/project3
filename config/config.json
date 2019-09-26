@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Burbank!123",
+    "password": "obfuscated",
     "database": "test_db",
     "host": "localhost",
     "dialect": "mysql"
