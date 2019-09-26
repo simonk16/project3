@@ -1,9 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": "quoctuan",
-    "database": "localhost",
-    "host": "test_db",
+    "password": "Burbank!123",
+    "database": "test_db",
+    "host": "localhost",
     "dialect": "mysql"
    
   },

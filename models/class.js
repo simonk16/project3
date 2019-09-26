@@ -22,26 +22,26 @@ module.exports = function (sequelize, DataTypes) {
         }
     });
 
-    Class.associate = function (models) {
-        Class.belongsToMany(models.Teacher, {
+    // Class.associate = function (models) {
+    //     Class.belongsToMany(models.Teacher, {
 
-            through: 'AllData',
-            as: 'Teacher',
-            foreignKey: 'teacherId'
+    //         through: 'AllData',
+    //         as: 'Teacher',
+    //         foreignKey: 'teacherId'
 
-        })
-    }
+    //     })
+    // }
     
-    Class.associate = function (models) {
-        Class.belongsToMany(models.Student, {
+    // Class.associate = function (models) {
+    //     Class.belongsToMany(models.Student, {
 
-            through: 'AllData',
-            as: 'Student',
-            foreignKey: 'studentId'
+    //         through: 'AllData',
+    //         as: 'Student',
+    //         foreignKey: 'studentId'
 
 
-        })
-    } 
+    //     })
+    // } 
     
     return Class;
 };
