@@ -1,12 +1,12 @@
-let db = require("../models");
+let db = require("../models/student");
 
 
 
 
-module.exports = function (app) {
-    app.get("/api/students/", function (req, res) {
-        db.Student.findAll({}).then(function(dbStudent){
-            return dbStudent
-        }) 
+module.exports = (app) => {
+    app.get("/api/students/", (req, res) => {
+        db.findAll({}).then(response => {
+            return response
+        })
     })
 }

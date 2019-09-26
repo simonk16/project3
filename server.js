@@ -21,7 +21,7 @@ app.use(express.static("public"));
 // clearing the testdb
 
 // Starting the server, syncing our models ------------------------------------/
-    app.listen(PORT, function () {
+    app.listen(PORT, () => {
         console.log(`\u{1F30E}==> Listening on port ${PORT}`);
     });
 
