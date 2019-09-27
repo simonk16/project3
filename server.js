@@ -1,6 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const app = express();
+const routes = require("./routes");
 const db = require("./models");
 
 const PORT = process.env.PORT || 3001;
@@ -15,6 +16,8 @@ app.use(morgan("dev")); // log every request to the console
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
+
+app.use(routes);
 
 
 // If running a test, set syncOptions.force to true
