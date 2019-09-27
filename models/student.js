@@ -1,12 +1,37 @@
-'use strict';
-module.exports = (sequelize, DataTypes) => {
-  const Student = sequelize.define('Student', {
-    firstName: DataTypes.STRING,
-    lastName: DataTypes.STRING,
-    points: DataTypes.INTEGER
-  }, {});
-  Student.associate = function(models) {
-    // associations can be defined here
-  };
-  return Student;
+
+
+module.exports = function (sequelize, DataTypes) {
+    const Student = sequelize.define("Student", {
+        
+    //   id: {
+    //       type: DataTypes.UUID,
+    //       primaryKey: true,
+    //       defaultValue: DataTypes.UUIDV4
+    //   },
+      
+      firstName: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            len: [1]
+        }
+      },
+
+      lastName: {
+          type: DataTypes.STRING,
+          allowNull: false,
+          validate: {
+              len: [1]
+          }
+      },
+    });
+
+    Student.associate = function (models) {
+        Student.belongsToMany(models.Teacher, {            
+            foreignKey:"studentId",
+            through: models.Class
+        });
+    };
+
+    return Student;
 };
