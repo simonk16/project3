@@ -1,4 +1,4 @@
-USE l86mavy1z1xtre3k;
+USE test_db;
 
 INSERT INTO Teacher (firstName, lastName)
 VALUES ("Vishu", "Guntupalli");
