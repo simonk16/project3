@@ -17,28 +17,32 @@ module.exports = {
         lastName: 'Kraus',
         points: 50,
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
+        ClassId: 1
       },
       {
         firstName: 'Ben',
         lastName: 'Flippen',
         points: 69,
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
+        ClassId: 1
       },
       {
         firstName: 'Rachel',
         lastName: 'Givens',
         points: 69,
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
+        ClassId: 1
       },
       {
         firstName: 'Rachel',
         lastName: 'Harrison',
         points: 69,
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
+        ClassId: 1
       }
     ], {});
   },

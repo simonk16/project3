@@ -15,33 +15,24 @@ module.exports = function (sequelize, DataTypes) {
                 len: [1]
             }
 
-        },
-
-        points: {
-            type: DataTypes.INTEGER
         }
     });
 
-    // Class.associate = function (models) {
-    //     Class.belongsToMany(models.Teacher, {
-
-    //         through: 'AllData',
-    //         as: 'Teacher',
-    //         foreignKey: 'teacherId'
-
-    //     })
-    // }
     
-    // Class.associate = function (models) {
-    //     Class.belongsToMany(models.Student, {
+    
+    Class.associate = function (models) { [Class.hasMany(models.Teacher, {
+        foreignKey: {
+            allowNull: false
+        }
+    }), Class.hasMany(models.Student, {
+        foreignKey: {
+            allowNull: false
+        }
+    })]
+        
+    } 
+    
 
-    //         through: 'AllData',
-    //         as: 'Student',
-    //         foreignKey: 'studentId'
-
-
-    //     })
-    // } 
     
     return Class;
 };

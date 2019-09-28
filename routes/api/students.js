@@ -7,5 +7,6 @@ router.route("/")
 
 router.route("/:id")
     .get(studentsController.findOneStudent)
+    .delete(studentsController.deleteById)
 module.exports = router;
         

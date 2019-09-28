@@ -24,12 +24,14 @@ module.exports = function (sequelize, DataTypes) {
               len: [1]
           }
       },
+      points: {
+          type: DataTypes.INTEGER
+      }
     });
 
     Student.associate = function (models) {
-        Student.belongsToMany(models.Teacher, {            
-            foreignKey:"studentId",
-            through: models.Class
+        Student.belongsTo(models.Class, {            
+            onDelete: "cascade"
         });
     };
 

@@ -26,5 +26,16 @@ module.exports = {
         }).catch(err => {
             res.json(err)
         })
+  },
+  deleteById: (req, res) => {
+      db.Student.destroy({
+          where: {
+              id: req.params.id
+          }
+      }).then(removedStudent => {
+        res.json(removedStudent)
+    }).catch(err => {
+        res.json(err)
+    })
   }
 }
