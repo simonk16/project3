@@ -25,8 +25,6 @@ module.exports = function(sequelize, DataTypes) {
     });
   
     Teacher.associate = function(models) {
-      // Associating Author with Posts
-      // When an Author is deleted, also delete any associated Posts
       Teacher.belongsTo(models.Class, {onDelete: "cascade"});
     };
   
