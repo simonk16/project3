@@ -1,0 +1,18 @@
+.header {
+    /* position: fixed; */
+    background-color: #42a5f5;
+    overflow: hidden;
+    /* left: 0; */
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  .content {
+      height: 1000px;
+      background-color: #42a5f5;
+      background: white;
+  }
+  .container{
+    margin-top: 1rem;
+    margin-bottom: 1rem
+  }
