@@ -17,6 +17,14 @@ module.exports = {
     })
   },
   findOneStudent: (req, res) => {
-      
+      db.Student.findOne({ 
+          where: {
+              id: req.params.id
+          } 
+        }).then(student => {
+            res.json(student)
+        }).catch(err => {
+            res.json(err)
+        })
   }
 }
