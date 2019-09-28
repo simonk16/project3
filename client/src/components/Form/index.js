@@ -22,3 +22,41 @@ export function FormBtn(props){
         </button>
     );
 }
+
+export function ClassRadio(props){
+    return(
+        <form action="#">
+            <p>
+                <label>
+                    <input name="group1" className="with-gap" type="radio" />
+                    <span>M/W</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input name="group1" className="with-gap" type="radio" />
+                    <span>T/TH</span>
+                </label>
+            </p>
+        </form>
+    );
+}
+
+export function OccupationRadio(props){
+    return(
+        <form action="#">
+            <p>
+                <label>
+                    <input name="group1" className="with-gap" type="radio" />
+                    <span>Teacher</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input name="group1" className="with-gap" type="radio" />
+                    <span>Student</span>
+                </label>
+            </p>
+        </form>
+    );
+}
