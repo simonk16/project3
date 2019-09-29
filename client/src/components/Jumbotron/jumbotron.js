@@ -1,6 +1,5 @@
 import React from "react";
-import "./style.css";
-import "../Footer/style.css";
+import "../../assets/jumbotron.css";
 
 function Jumbotron (){
     return(

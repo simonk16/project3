@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import Nav from "..components/Nav";
 import { Input, TextArea, FormBtn } from "../components/Form";
-import Footer from "../components/Footer";
+import Footer from "../../components/Footer/footer"
 
 class SignIn extends Component {
     state = {
@@ -71,6 +71,7 @@ class SignIn extends Component {
 
           </Col>
         </Row>
+        <Footer />
       </Container>
     );
   }

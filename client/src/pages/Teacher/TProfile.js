@@ -2,9 +2,10 @@ import React, {Component} from "react";
 // import API from "../utils/API";
 // import {Link} from "react-router-dom";
 import { Container, Row, Col } from "../../components/Grid";
-// import {Input, TextArea, FormBtn} from "../components/Form";
-import Jumbotron from "../../components/Jumbotron";
-import { ClassRadio, OccupationRadio } from "../../components/Form";
+import {Input, TextArea, FormBtn, ClassRadio, OccupationRadio} from "../../components/Form/form";
+import Jumbotron from "../../components/Jumbotron/jumbotron";
+import Nav from "../../components/Nav/nav";
+import Footer from "../../components/Footer/footer"
 
 class TProfile extends Component {
 //   state = {
@@ -21,19 +22,25 @@ class TProfile extends Component {
   render() {
     return (
       <Container fluid>
+        <Nav />
         <Row>
           <Col size="md-12">
             <Jumbotron>
               <h1>
-                {/* {this.state.book.title} by {this.state.book.author} */}
+                Welcome
               </h1>
             </Jumbotron>
           </Col>
         </Row>
         <Row>
           <Col size="md-10 md-offset-1">
+            <Container>
+              <Input />
+              <TextArea />
             <ClassRadio/>
             <OccupationRadio/>
+            <FormBtn />
+            </Container>
             {/* <article>
               <h1>Synopsis</h1>
               <p>
@@ -47,6 +54,7 @@ class TProfile extends Component {
             {/* <Link to="/">← Back to Authors</Link> */}
           </Col>
         </Row>
+        <Footer />
       </Container>
     );
   }

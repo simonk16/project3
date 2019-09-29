@@ -1,9 +1,9 @@
 import React from 'react';
 // import logo from './logo.svg';
 // import './App.css';
-import Jumbotron from "./components/Jumbotron";
-import Footer from "./components/Footer";
-import TProfile from './pages/Teacher/TProfile';
+import Jumbotron from "../src/components/Jumbotron/jumbotron";
+import Footer from "../src/components/Footer/footer";
+import TProfile from '../src/pages/Teacher/TProfile';
 
 function App() {
   return (
