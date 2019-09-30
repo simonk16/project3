@@ -1,0 +1,20 @@
+.userCard2 {
+    height: 410px;
+    width: 350px;
+    margin-top: 45px;
+    /* margin-left: 665px; */
+    /* margin-right: 900px !important; */
+    margin-bottom: auto;
+    background: #1848A0;
+    position: relative;
+    display: flex;
+    justify-content: center !important;
+    text-align: center !important;
+    flex-direction: column;
+    padding: 25px 30px 25px 30px !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 3, 3, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+
+}
