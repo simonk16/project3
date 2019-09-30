@@ -26,6 +26,12 @@ module.exports = function (sequelize, DataTypes) {
       },
       points: {
           type: DataTypes.INTEGER
+      },
+      userName: {
+          type: DataTypes.STRING
+      },
+      password: {
+          type: DataTypes.STRING
       }
     });
 
