@@ -1,17 +1,18 @@
 import React from "react";
+import './style.css';
+import logoImg from '../../assets/images/logo3.png';
+import homeImg from '../../assets/images/home.png';
+import extImg from '../../assets/images/exit.png';
 
 function Nav() {
     return (
-        <nav>
-            <div class="nav-wrapper">
-                <a href="../public/images/logo.png" class="brand-logo left"></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#"><img src="home.png"/></a></li>
-                    <li><a href="#"><img src="" /></a></li>
-                    <li><a href="collapsible.html"></a></li>
-                </ul>
+        <div className="header">
+            <img className="logo" type="button" src={logoImg} href="#default" />
+            <div className="header-right">
+                <img className="raise" id="img" type="button" src={homeImg} href="#home" />
+                <img className="raise" id="img" type="button" src={extImg} href="#exit" />
             </div>
-        </nav>
+        </div>
     );
 }
 

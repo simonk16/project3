@@ -1,18 +1,18 @@
-.header {
-    position: fixed;
-    background-color: #42a5f5;
-    overflow: hidden;
-    left: 0;
-    margin-top: 20px;
-    width: 100%;
-    text-align: center;
+.jumbo {
+    /* position: fixed; */
+    background-color: #42a5f5 !important;
+    /* overflow: hidden; */
+    /* left: 0; */
+    margin-top: 20px !important;
+    width: 100% !important;
+    text-align: center !important;
   }
   .content {
-      height: 1000px;
-      background-color: #42a5f5;
-      background: white;
+      height: 1000px !important;
+      background-color: #42a5f5 !important; 
+      background: white !important;
   }
   .container{
-    margin-top: 1rem;
-    margin-bottom: 1rem
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
   }
