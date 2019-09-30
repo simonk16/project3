@@ -8,7 +8,8 @@ const db = require("./models");
 const jwt = require("jsonwebtoken")
 const jwtSecret = require('./config/jwtConfig')
 
-const PORT = process.env.PORT || 3001;
+// const PORT = process.env.PORT || 3001;
+const PORT = 3001;
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
