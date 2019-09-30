@@ -21,14 +21,26 @@ module.exports = function(sequelize, DataTypes) {
           validate: {
               len: [1]
           }
+      },
+      username: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      password: {
+        type: DataTypes.STRING,
+        allowNull: false,
       }
     });
   
     Teacher.associate = function(models) {
+<<<<<<< HEAD
       Teacher.belongsToMany(models.Student, {
         foreignKey: "teacherId",
         through: models.Class      
       });
+=======
+      Teacher.belongsTo(models.Class, {onDelete: "cascade"});
+>>>>>>> origin/master
     };
   
     return Teacher;

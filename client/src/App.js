@@ -1,21 +1,21 @@
 import React from 'react';
-// import logo from './logo.svg';
-import './App.css';
-import Jumbotron from "./components/Jumbotron";
-import Footer from "./components/Footer";
-import TProfile from './pages/Teacher/TProfile';
-import Login from "./components/Login/login";
 
+import {BrowserRouter} from "react-router-dom";
+import {Switch, Route} from "react-router-dom";
+import Login from "./components/login/login"
+import Signup from "./components/signup/signup";
+import StudentsLanding from "./components/studentsLanding/StudentsLanding";
+import TeachersLanding from "./components/TeachersLanding/TeachersLanding"
 function App() {
   return (
-    <div>
-
-      <Login />
-      {/* <Jumbotron>
-      <TProfile />
-      </Jumbotron>
-      <Footer /> */}
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Login}/>
+        <Route exact path="/signup" component={Signup}/>
+        <Route exact path="/student" component={StudentsLanding} />
+        <Route exact path="/teacher" component={TeachersLanding} />
+      </Switch>
+    </BrowserRouter>
   );
   
 }

@@ -15,13 +15,29 @@ module.exports = function (sequelize, DataTypes) {
                 len: [1]
             }
 
-        },
-
-        points: {
-            type: DataTypes.INTEGER
         }
     });
+<<<<<<< HEAD
 
+=======
+ 
+    
+    
+    Class.associate = function (models) { [Class.hasMany(models.Teacher, {
+        foreignKey: {
+            allowNull: false
+        }
+    }), Class.hasMany(models.Student, {
+        foreignKey: {
+            allowNull: false
+        }
+    })]
+        
+    } 
+    
+
+    
+>>>>>>> origin/master
     return Class;
 };
 // this is the join for students and teacher
