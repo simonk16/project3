@@ -1,12 +1,16 @@
 import React from "react";
+import './style.css';
+import logoImg from '../../assets/images/logo3.png';
+import homeImg from '../../assets/images/home.png';
+import extImg from '../../assets/images/exit.png';
 
 function Nav() {
     return (
         <div className="header">
-            <a href="#default" src="../public/images/logo.png" className="logo"></a>
+            <img className="logo" type="button" src={logoImg} href="#default" />
             <div className="header-right">
-                <a className="raise" src="../public/images/home.png" href="#home"></a>
-                <a className="raise" src="../public/images/exit.png" href="#exit"></a>
+                <img className="raise" id="img" type="button" src={homeImg} href="#home" />
+                <img className="raise" id="img" type="button" src={extImg} href="#exit" />
             </div>
         </div>
     );

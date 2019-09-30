@@ -3,7 +3,7 @@ import "./style.css";
 
 function Footer(){
     return(
-        <footer className="page-footer">       
+        <footer className="footer">       
           <div className="footer-copyright">
             <div className="container">
             © 2019 pickÜ

@@ -1,24 +1,32 @@
 import React from 'react';
+import { Container, Row, Col } from './components/Grid/index.js';
 import logo from './logo.svg';
-import './App.css';
-import Student from './components/Student';
+// import './App.css';
+// import Student from './components/Student';
 import Nav from './components/Nav';
-import Jumbotron from './components/Jumbotron';
-import {Input, TextArea, FormBtn} from './components/Form';
+import CardSignIn from './components/CardSignIn';
+import CardSignUp from './components/CardSignUp'
 import Footer from './components/Footer';
+
 
 function App() {
   return (
     <div>
-        <Nav/>
-        <Jumbotron/>
-        <Input/>
-        <TextArea/>
-        <FormBtn/>
-        <Footer/>
+      <Nav />
+      <Container fluid>
+        <Row>
+          <Col size="md-6">
+            <CardSignIn />
+          </Col>
+          <Col size="md-6">
+            <CardSignUp />
+          </Col>
+        </Row>
+      </Container>
+      <Footer />
     </div>
   );
-  
+
 }
 
 
