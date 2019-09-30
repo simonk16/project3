@@ -8,10 +8,7 @@ import TProfile from '../src/pages/Teacher/TProfile';
 function App() {
   return (
     <div>
-      <Jumbotron>
         <TProfile />
-      </Jumbotron>
-      <Footer />
     </div>
   );
   
