@@ -21,15 +21,19 @@ module.exports = function(sequelize, DataTypes) {
           validate: {
               len: [1]
           }
+      },
+      username: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      password: {
+        type: DataTypes.STRING,
+        allowNull: false,
       }
     });
   
     Teacher.associate = function(models) {
-      // Associating Author with Posts
-      // When an Author is deleted, also delete any associated Posts
-      Teacher.hasMany(models.Class, {
-        onDelete: "cascade"
-      });
+      Teacher.belongsTo(models.Class, {onDelete: "cascade"});
     };
   
     return Teacher;
