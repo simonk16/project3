@@ -1,8 +1,8 @@
 .jumbo {
-    /* position: fixed; */
+    position: fixed;
     background-color: #42a5f5 !important;
-    /* overflow: hidden; */
-    /* left: 0; */
+    overflow: hidden;
+    left: 0;
     margin-top: 20px !important;
     width: 100% !important;
     text-align: center !important;

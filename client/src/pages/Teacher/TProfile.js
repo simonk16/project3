@@ -11,24 +11,26 @@ import TCard from "../../components/TCard/TCard.js"
 class TProfile extends Component {
   render() {
     return (
+      <div>
+        <Nav />
         <Container fluid>
-          <Nav />
           <Row>
             <Col size="md-12">
               <Jumbotron>
                 <TeachersLanding />
               </Jumbotron>
-              </Col>
-            </Row>
-            <Row>
-              <Col size="md-4">
-                <TCard />
-              </Col>
-            </Row>
-            <Footer />
-      </Container>
-        );
-      }
-    }
-    
-    export default TProfile;
+            </Col>
+          </Row>
+          <Row>
+            <Col size="md-4">
+              <TCard />
+            </Col>
+          </Row>
+        </Container>
+        <Footer />
+      </div>
+    );
+  }
+}
+
+export default TProfile;
