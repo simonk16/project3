@@ -1,20 +1,19 @@
 import React from "react";
 import "../../assets/css/tcard.css";
 import {ClassDrop, FormBtn} from "../Form/index";
-import {Container, Row, Col} from "../Grid/index"
+// import {Container, Row} from "../Grid/index"
 
 
 function TCard() {
     return (
         <div className="tCard">
-            <Container fluid>
-                <Row fluid>
-                    <Col size="md-12">
+            {/* <Container>
+                <Row className="justify-content-md-center"> */}
                     <ClassDrop/>
+                    <br/>
                     <FormBtn/>
-                    </Col>
-                </Row>
-            </Container>
+                {/* </Row>
+            </Container> */}
         </div>
     );
 }

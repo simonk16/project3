@@ -13,17 +13,15 @@ class TProfile extends Component {
     return (
       <div>
         <Nav />
+        <br></br>
         <Container fluid>
           <Row>
             <Col size="md-12">
               <Jumbotron>
                 <TeachersLanding />
+                <br></br>
+                <TCard/>
               </Jumbotron>
-            </Col>
-          </Row>
-          <Row>
-            <Col size="md-4">
-              <TCard />
             </Col>
           </Row>
         </Container>

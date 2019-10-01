@@ -1,4 +1,4 @@
-.jumbo {
+/* .jumbo {
     position: fixed;
     background-color: #42a5f5 !important;
     overflow: hidden;
@@ -15,4 +15,9 @@
   .container{
     margin-top: 1rem !important;
     margin-bottom: 1rem !important;
+  } */
+
+  .jumbotron {
+    background-color: #E3F2FD;
+    font-family: 
   }

@@ -1,5 +1,5 @@
 import React from "react";
-import './style.css';
+import '../../assets/css/nav.css';
 import logoImg from '../../assets/images/logo3.png';
 import homeImg from '../../assets/images/home.png';
 import extImg from '../../assets/images/exit.png';
