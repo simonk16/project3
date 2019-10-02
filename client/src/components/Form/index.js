@@ -63,52 +63,43 @@ export function ClassDrop(props) {
                     <label>Select the class schedule...</label>
                     <select id="myClass">
                         <option value="default">Select..</option>
-                        <option value="1">M/W/S</option>
-                        <option value="2">Tu/Th/S</option>
+                        <option value="1">Mon/Wed/Sat</option>
+                        <option value="2">Tue/Thu/Sat</option>
                     </select>
                 </p>
             </fieldset>
         </form>
     )
 }
-// export function ClassRadio(props) {
-//     return (
-//         <form action="#">
-//             <br></br>
-//             <p>
-//                 <label>
-//                     <input name="group1" className="with-gap" type="radio" {...props} />
-//                     <span>M/W</span>
-//                 </label>
-//             </p>
-//             <br></br>
-//             <p>
-//                 <label>
-//                     <input name="group1" className="with-gap" type="radio" {...props} />
-//                     <span>T/TH</span>
-//                 </label>
-//             </p>
-//         </form>
-//     );
-// }
 
-// export function OccupationRadio(props) {
-//     return (
-//         <form action="#">
-//             <br></br>
-//             <p>
-//                 <label>
-//                     <input name="group1" className="with-gap" type="radio" {...props} />
-//                     <span>Teacher</span>
-//                 </label>
-//             </p>
-//             <br></br>
-//             <p>
-//                 <label>
-//                     <input name="group1" className="with-gap" type="radio" {...props} />
-//                     <span>Student</span>
-//                 </label>
-//             </p>
-//         </form>
-//     );
-// }
+export function TDrop1 (props){
+    return (
+        <form action="#">
+            <fieldset>
+                <legend>Choose your Class</legend>
+                <br></br>
+                <select id="teacherClass1">
+                    <option value="default">Select...</option>
+                    <option value="1">Tue/Thu</option>
+                    <option value="2">Sat</option>
+                </select>
+            </fieldset>
+        </form>
+    )
+}
+
+export function TDrop2 (props){
+    return (
+        <form action="#">
+            <fieldset>
+                <legend>Choose your Class</legend>
+                <br></br>
+                <select id="teacherClass2">
+                    <option value="default">Select...</option>
+                    <option value="1">Mon/Wed</option>
+                    <option value="2">Sat</option>
+                </select>
+            </fieldset>
+        </form>
+    )
+}

@@ -6,7 +6,8 @@ import Jumbotron from "../../components/Jumbotron/jumbotron.js";
 import Nav from "../../components/Nav/nav.js";
 import Footer from "../../components/Footer/footer.js";
 import TeachersLanding from "../../components/TeachersLanding/TeachersLanding";
-import TCard from "../../components/TCard/TCard.js"
+import TCard from "../../components/TCard/TCard.js";
+import { RosterBtn, StatsBtn, PlayBtn } from "../../components/Buttons/buttons.js"
 
 class TProfile extends Component {
   render() {
@@ -21,6 +22,9 @@ class TProfile extends Component {
                 <TeachersLanding />
                 <br></br>
                 <TCard/>
+                <RosterBtn/>
+                <PlayBtn/>
+                <StatsBtn/>
               </Jumbotron>
             </Col>
           </Row>
