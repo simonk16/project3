@@ -11,7 +11,10 @@ class Signup extends React.Component {
             confirmPassword: "",
             email: "",
             signedUp: false,
-            badPassword: false
+            badPassword: false,
+            firstName: "",
+            lastName: "",
+            classId: ""
         }
     }
 
@@ -30,7 +33,9 @@ class Signup extends React.Component {
         Axios.post("/registerUser", {
             username: this.state.username,
             password: this.state.password,
-            email: this.state.email
+            lastName: this.state.lastName,
+            firstName: this.state.firstName,
+            ClassId: this.state.classId
         }).then((data)=>{
             console.log("signed up")
             this.setState({signedUp: true})
@@ -44,10 +49,13 @@ class Signup extends React.Component {
         if(!this.state.signedUp) {
         return <div className="container">
         <form>
+        First name: <input type="text" name="firstName" class="form-control" value={this.state.firstName} onChange={this.handleChange} /><br />
+        Last name: <input type="text" name="lastName" class="form-control" value={this.state.lastName} onChange={this.handleChange} /><br />
         Username: <input type="text" name="username" class="form-control" value={this.state.username} onChange={this.handleChange} /><br />
         Password: <input type="password" name="password" class="form-control" value={this.state.password} onChange={this.handleChange} /><br />
         Confirm Password: <input type="password" class="form-control" name="confirmPassword" value={this.state.confirmPassword} onChange={this.handleChange} /><br />
         Email: <input type="text" name="email" class="form-control" value={this.state.email} onChange={this.handleChange}/><br />
+        ClassId: <input type="text" name="classId" class="form-control" value={this.state.classId} onChange={this.handleChange} /><br />
         <button type="submit" className="btn-success" onClick={this.signupUser}>Sign up</button>
         </form>
         <br/>
