@@ -1,6 +1,7 @@
 import React from "react";
 import "../../assets/css/buttons.css";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlayCircle } from "@fortawesome/free-regular-svg-icons"
 
 export function RosterBtn(props) {
     return (
@@ -24,10 +25,13 @@ export function StatsBtn(props) {
 
 export function PlayBtn(props) {
     return (
+
         <div>
-            <button {...props} type="submit" src= {playbtn} id="playbtn">{props.children}
+            <FontAwesomeIcon
+            icon={faPlayCircle} size="4x" id="playbtn">
+            {/* {...props} type="submit" id="playbtn">{props.children}  */}
             Play
-            </button>
+            </FontAwesomeIcon>
         </div>
     );
 }

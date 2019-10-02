@@ -7,10 +7,10 @@ import extImg from '../../assets/images/exit.png';
 function Nav() {
     return (
         <div className="header">
-            <img className="logo" type="button" src={logoImg} href="#default" />
+            <img className="logo" type="button" src={logoImg} href="#default" alt="pickulogo"/>
             <div className="header-right">
-                <img className="raise" id="img" type="button" src={homeImg} href="#home" />
-                <img className="raise" id="img" type="button" src={extImg} href="#exit" />
+                <img className="raise" id="img" type="button" src={homeImg} href="#home" alt="home"/>
+                <img className="raise" id="img" type="button" src={extImg} href="#exit" alt="logout" />
             </div>
         </div>
     );

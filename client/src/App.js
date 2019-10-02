@@ -1,4 +1,5 @@
 import React from 'react';
+// import "fontawesome";
 // import Student from './components/Student';
 // import CardSignIn from './components/CardSignIn';
 // import CardSignUp from './components/CardSignUp'
@@ -16,7 +17,7 @@ import TProfile from './pages/Teacher/TProfile';
 function App() {
   return (
     <div>
- <TProfile/>
+      <TProfile />
     </div>
 
   );

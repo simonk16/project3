@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import API from "../utils/API";
-// import {Link} from "react-router-dom";
+// import { render } from "react-router-dom";
 import { Container, Row, Col } from "../../components/Grid";
 import Jumbotron from "../../components/Jumbotron/jumbotron.js";
 import Nav from "../../components/Nav/nav.js";
@@ -21,10 +21,19 @@ class TProfile extends Component {
               <Jumbotron>
                 <TeachersLanding />
                 <br></br>
-                <TCard/>
-                <RosterBtn/>
-                <PlayBtn/>
-                <StatsBtn/>
+                <TCard />
+                <br></br>
+                <Row>
+                  <Col size="md-4">
+                  <RosterBtn />
+                  </Col>
+                  <Col size="md-4">
+                  <PlayBtn />
+                  </Col>
+                  <Col size="md-4">
+                  <StatsBtn />
+                  </Col>
+                </Row>
               </Jumbotron>
             </Col>
           </Row>

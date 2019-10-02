@@ -1,6 +1,6 @@
 import React from "react";
 import "../../assets/css/form.css";
-import { Container, Row, Col } from '../Grid/index.js';
+import { Container, Row } from '../Grid/index.js';
 
 export function Input(props) {
     return (
