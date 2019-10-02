@@ -33,14 +33,7 @@ module.exports = function(sequelize, DataTypes) {
     });
   
     Teacher.associate = function(models) {
-<<<<<<< HEAD
-      Teacher.belongsToMany(models.Student, {
-        foreignKey: "teacherId",
-        through: models.Class      
-      });
-=======
       Teacher.belongsTo(models.Class, {onDelete: "cascade"});
->>>>>>> origin/master
     };
   
     return Teacher;

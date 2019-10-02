@@ -17,9 +17,6 @@ module.exports = function (sequelize, DataTypes) {
 
         }
     });
-<<<<<<< HEAD
-
-=======
  
     
     
@@ -37,7 +34,6 @@ module.exports = function (sequelize, DataTypes) {
     
 
     
->>>>>>> origin/master
     return Class;
 };
 // this is the join for students and teacher
