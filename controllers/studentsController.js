@@ -4,7 +4,9 @@ const db = require("../models");
 module.exports = {
     getStudents: async function (req, res) {
         console.log("HERE!!!!!!")
-        db.Student.findAll({ raw: true}).then(students => {
+        db.Student.findAll({
+            raw: true
+        }).then(students => {
             console.log(students)
             res.json(students)
         }).catch(err => {
@@ -52,7 +54,7 @@ module.exports = {
             res.json(err)
         })
     },
-    
+
     deleteById: (req, res) => {
         db.Student.destroy({
             where: {
@@ -63,5 +65,22 @@ module.exports = {
         }).catch(err => {
             res.json(err)
         })
+    },
+
+    updateStudentPoints: (req, res) => {
+        
+        db.Student.update({
+            points: req.body.points
+        }, {
+            where: {
+                id: req.params.id
+            }
+        }).then(updatedStudent => {
+            res.json(updatedStudent)
+        }).catch(err => {
+            res.json(err)
+        })
     }
+
+
 }
