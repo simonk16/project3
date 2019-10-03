@@ -15,7 +15,8 @@ export default class Student extends Component {
     
     componentDidMount = () => {
         Axios.get("/api/students/").then(response => {
-            let oldState = this.state
+            let oldState = this.state;
+            console.log(response)
             oldState.students = response.data;
             this.setState(oldState)
         }).catch(err => {
@@ -25,11 +26,9 @@ export default class Student extends Component {
     
     render() {
         return (
-            <div>
-                {this.state.students.map(student => {
-                    return (<li>{student}</li>)
-                })}
-            </div>
+            <ul>
+                {this.state.students.map(student => <li>{`${student.firstName} ${student.lastName}`}</li>)}
+            </ul>
         )
     }
 }
