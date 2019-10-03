@@ -1,7 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './assets/css/reset.css'
 import App from './App';
+import TProfile from "./pages/Teacher/TProfile";
+import SignIn from "./pages/SignIn";
+import Class from "./pages/Class";
+import Student from "./pages/Student/Student";
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));

@@ -21,9 +21,9 @@ class TProfile extends Component {
               <Jumbotron>
                 <TeachersLanding />
                 <br></br>
-                <TCard>
-                  <Link to={"/classes/" + class._id}></Link>
-                </TCard>
+                <TCard/>
+                  {/* <Link to={"/classes/" + class._id}></Link>
+                </TCard> */}
                 <br></br>
                 <Row>
                   <Col size="md-4">

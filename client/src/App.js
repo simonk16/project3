@@ -1,25 +1,32 @@
 import React from 'react';
-import { Router , Route, Switch } from "react-router";
+import ReactDOM from 'react-dom';
+import { Route, Link, BrowserRoter as Router } from "react-router-dom";
+// import "fontawesome";
+// import Student from './components/Student';
+// import CardSignIn from './components/CardSignIn';
+// import CardSignUp from './components/CardSignUp'
 
-import TProfile from './pages/Teacher/TProfile';
+
+// import TProfile from './pages/Teacher/TProfile';
+import TeachersLanding from './components/TeachersLanding/TeachersLanding';
 
 
+// import Login from "./components/login/login"
+// import Signup from "./components/signup/signup";
 
-function App() {
-  return (
-    <Router>
-      <div>
-        <Nav />
+// class App extends Component{
+//   render()
+// }
+const App = () => {
+return(
+    <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={SignIn} />
-          <Route exact path="/signup" component={SignUp} />
-          <Route exact path="/logout" component={SignIn} />
+            <Route path="/" component={SignUp} />
+            <Route path="/signin" component={SignIn} />
+            <Route path="/teacher" component={TeachersLanding} />
         </Switch>
-      </div>
-    </Router>
-
-  );
-
+    </BrowserRouter>
+)
 }
 
 
