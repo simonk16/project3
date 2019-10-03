@@ -1,12 +1,12 @@
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-
-  main {
-    flex: 1 0 auto;
+.footer {
+    position: absolute;
+    left: 0; 
+    width: 100%;
+    background-color: #1848A0;
+    color: #E3F2FD;
+    text-align: center;
   }
 .container{
-    align-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem
 }
