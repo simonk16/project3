@@ -2,28 +2,28 @@ import React from "react";
 import "./style.css";
 import { Container, Row, Col } from '../Grid/index.js';
 
-export function firstName() {
+export function FirstName() {
     return (
         <div>
             <div className="input-group">
                 <div className="input-group-prepend">
                     <span className="input-group-text">First Name</span>
                 </div>
-                <input type="text" aria-label="First name" className="form-control" />
+                <input type="text" aria-label="First name" className="form-control" value={this.state.username} onChange={this.handleChange}/>
             </div>
 
         </div>
     );
 }
 
-export function lastName() {
+export function LastName() {
     return (
         <div>
             <div className="input-group">
                 <div className="input-group-prepend">
                     <span className="input-group-text">Last Name</span>
                 </div>
-                <input type="text" aria-label="Last name" className="form-control" />
+                <input type="text" aria-label="Last name" className="form-control" value={this.state.password} onChange={this.handleChange}/>
             </div>
             <br></br>
         </div>
