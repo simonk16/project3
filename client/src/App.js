@@ -1,24 +1,22 @@
 import React from 'react';
-// import "fontawesome";
-// import Student from './components/Student';
-// import CardSignIn from './components/CardSignIn';
-// import CardSignUp from './components/CardSignUp'
-
+import { Router , Route, Switch } from "react-router";
 
 import TProfile from './pages/Teacher/TProfile';
 
 
-// import {BrowserRouter} from "react-router-dom";
-// import {Switch, Route} from "react-router-dom";
-// import Login from "./components/login/login"
-// import Signup from "./components/signup/signup";
-
 
 function App() {
   return (
-    <div>
-      <TProfile />
-    </div>
+    <Router>
+      <div>
+        <Nav />
+        <Switch>
+          <Route exact path="/" component={SignIn} />
+          <Route exact path="/signup" component={SignUp} />
+          <Route exact path="/logout" component={SignIn} />
+        </Switch>
+      </div>
+    </Router>
 
   );
 
