@@ -1,32 +1,46 @@
 input[type=text] {
     padding:5px; 
-    border:2px solid #ccc; 
-    background: #ccc;
-    height: 17px;
-    width: 200px;
+    border:2px solid #E3F2FD; 
+    background: #E3F2FD;
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
 
+.signUp {
+    font-size: 32px !important;
+    text-align: center !important;
+    color: #90CAF9 !important;
+}
+
+.teacher,
+.schedule {
+    font-size: 14pt;
+    text-align: center !important;
+    color: #90CAF9 !important;
+}
+
+.logIn,
+.signUp {
+    font-size: 32px !important;
+    text-align: center !important;
+    color: #90CAF9 !important;
+}
+
 .btn {
     position: inherit;
-    margin-bottom: 10px;
-    width: 85px;
-    height: 37px;
     border-radius: 8px;
-    box-shadow: 10px 10px 5px #1565C0;
-    font-size: 20px;
-    background: #BBDEFB;
+    box-shadow: 5px 5px 5px #1565C0;
+    background: #FBE9E7;
     color: #F4511E;
 }
 
 input[type=text]:focus {
-    border-color: black;
+    border-color: #F4511E;
 }
 
 input[type=submit] {
     padding:5px 15px; 
-    background:#ccc; 
+    background:#FBE9E7; 
     border:0 none;
     cursor:pointer;
     -webkit-border-radius: 5px;

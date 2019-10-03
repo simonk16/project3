@@ -1,19 +1,14 @@
 import React from "react";
 import './style.css';
-import { Input, TextArea, FormBtn, TeacherDrop, ClassDrop } from '../Form/index.js';
+import { Header, Input, TextArea, FormBtn } from '../Form/index.js';
 
 
 function CardSignIn() {
     return (
         <div className="userCard">
+            <Header />
             <Input />
             <TextArea />
-            <br></br>
-            <TeacherDrop />
-            <br></br>
-            <ClassDrop />
-            {/* <ClassRadio />
-            <OccupationRadio /> */}
             <br></br>
             <FormBtn />
         </div>
