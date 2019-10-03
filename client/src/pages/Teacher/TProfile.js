@@ -16,7 +16,7 @@ class TProfile extends Component {
         <Nav />
         <br></br>
         <Container fluid>
-          <Row>
+          <Row fluid>
             <Col size="md-12">
               <Jumbotron>
                 <TeachersLanding />

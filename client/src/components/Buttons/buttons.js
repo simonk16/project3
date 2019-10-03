@@ -28,8 +28,8 @@ export function PlayBtn(props) {
 
         <div>
             <FontAwesomeIcon
-            icon={faPlayCircle} size="4x" id="playbtn">
-            {/* {...props} type="submit" id="playbtn">{props.children}  */}
+            icon={faPlayCircle} size="4x" id="playbtn" type="submit">
+            {/* {...props} >{props.children}  */}
             Play
             </FontAwesomeIcon>
         </div>

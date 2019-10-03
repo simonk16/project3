@@ -11,3 +11,6 @@
     background-color: #E3F2FD;
     font-family: 'Press Start 2P', cursive;
 }
+#playbtn {
+    -webkit-appearance: none
+}
