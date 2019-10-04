@@ -2,12 +2,12 @@ import React, { Component } from "react";
 // import API from "../utils/API";
 // import { render } from "react-router-dom";
 import { Container, Row, Col } from "../../components/Grid";
-import Jumbotron from "../../components/Jumbotron/jumbotron.js";
-import Nav from "../../components/Nav/nav.js";
-import Footer from "../../components/Footer/footer.js";
-import TCard from "../../components/TCard/TCard";
-import { RosterBtn, PlayBtn, StatsBtn } from "../../components/Form/form"
+import Jumbotron from "./components/Jumbotron/jumbotron.js";
+import Nav from "./components/Nav/nav.js";
+import Footer from "./components/Footer/footer.js";
 
+import TCard from "./components/TCard/TCard.js";
+import { RosterBtn, StatsBtn, PlayBtn } from "./components/Buttons/buttons.js"
 
 class TProfile extends Component {
   render() {
@@ -19,8 +19,9 @@ class TProfile extends Component {
           <Row fluid>
             <Col size="md-12">
               <Jumbotron>
+                
                 <br></br>
-                <TCard/>
+                <TCard />
                 <br></br>
                 <Row>
                   <Col size="md-4">
