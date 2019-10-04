@@ -1,6 +1,9 @@
 import React from "react";
-import "./style.css";
-import { Container, Row, Col } from '../Grid/index.js';
+import "../../assets/css/form.css";
+import "../../assets/css/buttons.css";
+import { Container, Row } from '../Grid/index.js';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlayCircle } from "@fortawesome/free-regular-svg-icons"
 
 export function FirstName() {
     return (
@@ -127,11 +130,79 @@ export function ClassDrop() {
                     <br></br>
                     <select id="myClass">
                         <option value="default">Select..</option>
-                        <option value="1">M/W/S</option>
-                        <option value="2">Tu/Th/S</option>
+                        <option value="1">Mon/Wed/Sat</option>
+                        <option value="2">Tue/Thu/Sat</option>
                     </select>
                 </p>
             </fieldset>
         </form>
+    );
+}
+
+export function TDrop1 (props){
+    return (
+        <form action="#">
+            <fieldset>
+                <legend>Choose your Class</legend>
+                <br></br>
+                <select id="teacherClass1">
+                    <option value="default">Select...</option>
+                    <option value="1">Tue/Thu</option>
+                    <option value="2">Sat</option>
+                </select>
+            </fieldset>
+        </form>
+    );
+}
+
+export function TDrop2 (props){
+    return (
+        <form action="#">
+            <fieldset>
+                <legend>Choose your Class</legend>
+                <br></br>
+                <select id="teacherClass2">
+                    <option value="default">Select...</option>
+                    <option value="1">Mon/Wed</option>
+                    <option value="2">Sat</option>
+                </select>
+            </fieldset>
+        </form>
     )
 }
+<<<<<<< HEAD:client/src/components/Form/index.js
+=======
+
+export function RosterBtn(props) {
+    return (
+        <div>
+            <button {...props} type="submit" className="btn">{props.children}
+                Roster
+                </button>
+        </div>
+    );
+}
+
+export function StatsBtn(props) {
+    return (
+        <div>
+            <button {...props} type="submit" className="btn">{props.children}
+                Standings
+                </button>
+        </div>
+    );
+}
+
+export function PlayBtn(props) {
+    return (
+
+        <div>
+            <FontAwesomeIcon
+            icon={faPlayCircle} size="4x" id="playbtn" type="submit">
+            {/* {...props} >{props.children}  */}
+            Play
+            </FontAwesomeIcon>
+        </div>
+    );
+}
+>>>>>>> 459b053ad251fcb77689ee53cf8ca024194d5dbf:client/src/components/Form/form.js
