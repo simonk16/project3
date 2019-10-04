@@ -1,5 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
 import { NavLink } from "react-router-dom"
 class TeachersLanding extends React.Component {
     render() {
@@ -17,15 +16,4 @@ class TeachersLanding extends React.Component {
     }
 
 }
-=======
-import "../../assets/css/teacherslanding.css";
-
-const TeachersLanding = (props) => {
-    return (
-    <div>
-        <h1>Welcome Teacher</h1>
-    </div>
-    )
-}   
->>>>>>> master
 export default TeachersLanding;

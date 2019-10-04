@@ -170,39 +170,3 @@ export function TDrop2 (props){
         </form>
     )
 }
-<<<<<<< HEAD:client/src/components/Form/index.js
-=======
-
-export function RosterBtn(props) {
-    return (
-        <div>
-            <button {...props} type="submit" className="btn">{props.children}
-                Roster
-                </button>
-        </div>
-    );
-}
-
-export function StatsBtn(props) {
-    return (
-        <div>
-            <button {...props} type="submit" className="btn">{props.children}
-                Standings
-                </button>
-        </div>
-    );
-}
-
-export function PlayBtn(props) {
-    return (
-
-        <div>
-            <FontAwesomeIcon
-            icon={faPlayCircle} size="4x" id="playbtn" type="submit">
-            {/* {...props} >{props.children}  */}
-            Play
-            </FontAwesomeIcon>
-        </div>
-    );
-}
->>>>>>> 459b053ad251fcb77689ee53cf8ca024194d5dbf:client/src/components/Form/form.js
