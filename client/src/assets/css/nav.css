@@ -1,6 +1,7 @@
 body,
 html {
-    background: url("../../assets/images/background.png") no-repeat center center fixed;
+    /* background: url("../../assets/images/background.png") no-repeat center center fixed; */
+    background-color: #E3F2FD;
 }
 
 .header {
@@ -30,6 +31,11 @@ html {
   .header img.logo {
     width: 120px !important;
     height: 90px !important;
+  }
+
+  .raise,
+  .logo{
+    -webkit-appearance: none;
   }
   
   .raise:hover,
