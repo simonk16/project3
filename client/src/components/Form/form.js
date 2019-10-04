@@ -1,6 +1,9 @@
 import React from "react";
 import "../../assets/css/form.css";
+import "../../assets/css/buttons.css";
 import { Container, Row } from '../Grid/index.js';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlayCircle } from "@fortawesome/free-regular-svg-icons"
 
 export function Input(props) {
     return (
@@ -69,7 +72,7 @@ export function ClassDrop(props) {
                 </p>
             </fieldset>
         </form>
-    )
+    );
 }
 
 export function TDrop1 (props){
@@ -85,7 +88,7 @@ export function TDrop1 (props){
                 </select>
             </fieldset>
         </form>
-    )
+    );
 }
 
 export function TDrop2 (props){
@@ -102,4 +105,37 @@ export function TDrop2 (props){
             </fieldset>
         </form>
     )
+}
+
+export function RosterBtn(props) {
+    return (
+        <div>
+            <button {...props} type="submit" className="btn">{props.children}
+                Roster
+                </button>
+        </div>
+    );
+}
+
+export function StatsBtn(props) {
+    return (
+        <div>
+            <button {...props} type="submit" className="btn">{props.children}
+                Standings
+                </button>
+        </div>
+    );
+}
+
+export function PlayBtn(props) {
+    return (
+
+        <div>
+            <FontAwesomeIcon
+            icon={faPlayCircle} size="4x" id="playbtn" type="submit">
+            {/* {...props} >{props.children}  */}
+            Play
+            </FontAwesomeIcon>
+        </div>
+    );
 }

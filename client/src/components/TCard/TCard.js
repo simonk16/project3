@@ -1,6 +1,6 @@
 import React from "react";
 import "../../assets/css/tcard.css";
-import {TDrop1, FormBtn} from "../Form/index";
+import {TDrop1, FormBtn } from "../Form/form";
 // import {Container, Row} from "../Grid/index"
 
 

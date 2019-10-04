@@ -1,10 +1,11 @@
 import React, {Component} from "react";
 // import API from "../utils/API";
 // import {Link} from "react-router-dom";
-import { Container, Row, Col } from "../../components/Grid";
-import Jumbotron from "../../components/Jumbotron/jumbotron";
-import Nav from "../../components/Nav/nav";
-import Footer from "../../components/Footer/footer"
+import { Container, Row, Col } from "../components/Grid";
+import Jumbotron from "../components/Jumbotron/jumbotron";
+import { Input, TextArea, FormBtn } from "../components/Form/form";
+import Nav from "../components/Nav/nav";
+import Footer from "../components/Footer/footer"
 
 class Class extends Component {
 
@@ -26,8 +27,6 @@ class Class extends Component {
             <Container>
               <Input />
               <TextArea />
-            <ClassRadio/>
-            <OccupationRadio/>
             <FormBtn />
             </Container>
             {/* <article>

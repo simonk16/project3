@@ -5,9 +5,9 @@ import { Container, Row, Col } from "../../components/Grid";
 import Jumbotron from "../../components/Jumbotron/jumbotron.js";
 import Nav from "../../components/Nav/nav.js";
 import Footer from "../../components/Footer/footer.js";
-import TeachersLanding from "../../components/TeachersLanding/TeachersLanding";
-import TCard from "../../components/TCard/TCard.js";
-import { RosterBtn, StatsBtn, PlayBtn } from "../../components/Buttons/buttons.js"
+import TCard from "../../components/TCard/TCard";
+import { RosterBtn, PlayBtn, StatsBtn } from "../../components/Form/form"
+
 
 class TProfile extends Component {
   render() {
@@ -19,11 +19,8 @@ class TProfile extends Component {
           <Row fluid>
             <Col size="md-12">
               <Jumbotron>
-                <TeachersLanding />
                 <br></br>
                 <TCard/>
-                  {/* <Link to={"/classes/" + class._id}></Link>
-                </TCard> */}
                 <br></br>
                 <Row>
                   <Col size="md-4">
