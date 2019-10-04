@@ -1,29 +1,41 @@
 import React from 'react';
-import { Container, Row, Col } from './components/Grid/index.js';
-import Nav from './components/Nav';
+import { Route, BrowserRouter, Switch } from "react-router-dom";
+// import "fontawesome";
+// import Student from './components/Student';
 // import CardSignIn from './components/CardSignIn';
 // import CardSignUp from './components/CardSignUp'
-// import CardRoster from './components/CardRoster';
-// import Footer from './components/Footer';
-// import logo from './logo.svg';
-import './App.css';
-// import Jumbotron from "./components/Jumbotron";
-// import Footer from "./components/Footer";
+
 import TProfile from './pages/Teacher/TProfile';
-import SignIn from './pages/SignIn';
-import SignUp from './pages/SignUp';
-import {BrowserRouter} from "react-router-dom";
-import {Switch, Route} from "react-router-dom";
+// import TeachersLanding from './components/TeachersLanding/TeachersLanding';
+
+
 // import Login from "./components/login/login"
 // import Signup from "./components/signup/signup";
-// import StudentsLanding from "./components/studentsLanding/StudentsLanding";
-import TeachersLanding from "./components/TeachersLanding/TeachersLanding"
 
-function App() {
+<<<<<<< HEAD
+
+const App = () => {
   return (
-    <div></div>
-
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={CardSignIn} />
+        <Route exact path="/signup" component={CardSignUp} />
+        <Route exact path="/signup" component={StudentsLanding} />
+        <Route exact path="/teacher" component={TeachersLanding} />
+      </Switch>
+    </BrowserRouter>
   );
 
+=======
+// class App extends Component{
+//   render()
+// }
+const App = () => {
+    return (
+        <div>
+      <TProfile />
+    </div>
+    );
+>>>>>>> 459b053ad251fcb77689ee53cf8ca024194d5dbf
 }
 export default App;

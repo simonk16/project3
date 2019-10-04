@@ -1,0 +1,16 @@
+.btn {
+    position: inherit;
+    margin-bottom: 10px;
+    /* width: 100px; */
+    height: 37px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 5px #1565C0;
+    font-size: 20px;
+    background: #BBDEFB;
+    color: #F4511E;
+    background-color: #E3F2FD;
+    font-family: 'Press Start 2P', cursive;
+}
+#playbtn {
+    -webkit-appearance: none
+}

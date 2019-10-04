@@ -1,53 +1,44 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 // import API from "../utils/API";
-// import {Link} from "react-router-dom";
+// import { render } from "react-router-dom";
 import { Container, Row, Col } from "../../components/Grid";
-// import {Input, TextArea, FormBtn} from "../components/Form";
-import Jumbotron from "../../components/Jumbotron";
-import { ClassRadio, OccupationRadio } from "../../components/Form";
+import Jumbotron from "../../components/Jumbotron/jumbotron.js";
+import Nav from "../../components/Nav/nav.js";
+import Footer from "../../components/Footer/footer.js";
+import TCard from "../../components/TCard/TCard";
+import { RosterBtn, PlayBtn, StatsBtn } from "../../components/Form/form"
+
 
 class TProfile extends Component {
-//   state = {
-//     book: {}
-//   };
-//   // When this component mounts, grab the book with the _id of this.props.match.params.id
-//   // e.g. localhost:3000/books/599dcb67f0f16317844583fc
-//   componentDidMount() {
-//     API.getBook(this.props.match.params.id)
-//       .then(res => this.setState({ book: res.data }))
-//       .catch(err => console.log(err));
-//   }
-
   render() {
     return (
-      <Container fluid>
-        <Row>
-          <Col size="md-12">
-            <Jumbotron>
-              <h1>
-                {/* {this.state.book.title} by {this.state.book.author} */}
-              </h1>
-            </Jumbotron>
-          </Col>
-        </Row>
-        <Row>
-          <Col size="md-10 md-offset-1">
-            <ClassRadio/>
-            <OccupationRadio/>
-            {/* <article>
-              <h1>Synopsis</h1>
-              <p>
-                {this.state.book.synopsis}
-              </p>
-            </article> */}
-          </Col>
-        </Row>
-        <Row>
-          <Col size="md-2">
-            {/* <Link to="/">← Back to Authors</Link> */}
-          </Col>
-        </Row>
-      </Container>
+      <div>
+        <Nav />
+        <br></br>
+        <Container fluid>
+          <Row fluid>
+            <Col size="md-12">
+              <Jumbotron>
+                <br></br>
+                <TCard/>
+                <br></br>
+                <Row>
+                  <Col size="md-4">
+                  <RosterBtn />
+                  </Col>
+                  <Col size="md-4">
+                  <PlayBtn />
+                  </Col>
+                  <Col size="md-4">
+                  <StatsBtn />
+                  </Col>
+                </Row>
+              </Jumbotron>
+            </Col>
+          </Row>
+        </Container>
+        <Footer />
+      </div>
     );
   }
 }

@@ -28,6 +28,9 @@ input[type=text] {
 
 .btn {
     position: inherit;
+    margin-bottom: 10px;
+    /* width: 100px; */
+    height: 37px;
     border-radius: 8px;
     box-shadow: 5px 5px 5px #1565C0;
     background: #FBE9E7;
@@ -45,4 +48,7 @@ input[type=submit] {
     cursor:pointer;
     -webkit-border-radius: 5px;
     border-radius: 5px; 
+}
+legend{
+    color: #BBDEFB;
 }

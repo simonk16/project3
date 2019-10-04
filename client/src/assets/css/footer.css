@@ -1,10 +1,12 @@
 .footer {
     position: absolute;
-    left: 0; 
+    bottom: 0;
+    left: 0;
     width: 100%;
     background-color: #1848A0;
     color: #E3F2FD;
     text-align: center;
+    font-family: 'Press Start 2P', cursive;
   }
 .container{
     margin-top: 1rem;
