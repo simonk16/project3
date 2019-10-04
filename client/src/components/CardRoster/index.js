@@ -19,7 +19,7 @@ function CardRoster() {
                                     </div>
                                     <div className="flipCardBack">
                                         <h1>Student</h1>
-                                        <p>This className Schedule</p>
+                                        <p>{this.className.schedule}</p>
                                         <p>This Teacher</p>
                                     </div>
                                 </div>
