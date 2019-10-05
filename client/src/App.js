@@ -7,7 +7,6 @@ import { Route, BrowserRouter, Switch } from "react-router-dom";
 
 import TProfile from './pages/Teacher/TProfile';
 import SignUp from './pages/SignUp';
-
 import CardSignIn from './components/CardSignIn';
 
 // import Login from "./components/login/login"
