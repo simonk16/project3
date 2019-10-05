@@ -1,6 +1,6 @@
 import React from "react";
-import './style.css';
-import { Input, TextArea, FormBtn, TeacherDrop, ClassDrop } from '../Form/index.js';
+import '../../assets/css/cardsignin.css';
+import { Input, TextArea, FormBtn, TeacherDrop, ClassDrop } from '../Form/form';
 
 
 function CardSignIn() {
@@ -12,8 +12,6 @@ function CardSignIn() {
             <TeacherDrop />
             <br></br>
             <ClassDrop />
-            {/* <ClassRadio />
-            <OccupationRadio /> */}
             <br></br>
             <FormBtn />
         </div>
