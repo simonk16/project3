@@ -20,7 +20,7 @@ const App = () => {
         <Route exact path="/" component={CardSignIn} />
         <Route exact path="/signup" component={CardSignUp} />
         <Route exact path="/signup" component={StudentsLanding} />
-        <Route exact path="/teacher" component={TeachersLanding} />
+        <Route exact path="/teacher" component={TProfile} />
       </Switch>
     </BrowserRouter>
   );

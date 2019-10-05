@@ -170,8 +170,6 @@ export function TDrop2 (props){
         </form>
     )
 }
-<<<<<<< HEAD:client/src/components/Form/index.js
-=======
 
 export function RosterBtn(props) {
     return (
@@ -205,4 +203,3 @@ export function PlayBtn(props) {
         </div>
     );
 }
->>>>>>> 459b053ad251fcb77689ee53cf8ca024194d5dbf:client/src/components/Form/form.js

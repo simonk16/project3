@@ -1,18 +1,11 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import { Container, Row, Col } from '../components/Grid';
-import Nav from "..components/Nav";
-import { Input, TextArea, FormBtn } from "../components/Form";
-import Footer from "../../components/Footer/footer"
-=======
 import { Col, Row, Container } from "../components/Grid";
 import Nav from "../components/Nav/nav";
 import { Input, TextArea, FormBtn } from "../components/Form/form";
 import Footer from "../components/Footer/footer";
 import Jumbotron from "../components/Jumbotron/jumbotron"
->>>>>>> 459b053ad251fcb77689ee53cf8ca024194d5dbf
 
 class SignIn extends Component {
   state = {
