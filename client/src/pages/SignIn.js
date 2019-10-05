@@ -1,85 +1,57 @@
-import React, { Component } from "react";
-import API from "../utils/API";
-import { Link } from "react-router-dom";
+import React from "react";
+import Axios from "axios";
+import {Redirect, NavLink} from "react-router-dom";
 
-import { Col, Row, Container } from "../components/Grid";
-import Nav from "../components/Nav/nav";
-import { Input, TextArea, FormBtn } from "../components/Form/form";
-import Footer from "../components/Footer/footer";
-import Jumbotron from "../components/Jumbotron/jumbotron"
+class Login extends React.Component{
+    constructor(props){
+        super(props)
+        this.state={
+            username: "",
+            password: "",
+            loggedIn: false
+        }
+    }
 
+    handleChange = (event) => {
+        this.setState({
+          [event.target.name]: event.target.value,
+        });
+      };
 
-class SignIn extends Component {
-  state = {
-    user: {},
-  };
+    loginUser = (event)=>{
+        event.preventDefault();
+        Axios.post("/loginUser", {
+            username: this.state.username,
+            password: this.state.password,
+        }).then((res)=>{
+            localStorage.setItem('JWT', res.data.token);
+            this.setState({loggedIn: true})
+            console.log("logged in")
+        }).catch((err)=>{
+            console.log(err)
+        })
+    }
 
-  // handleFormSubmit = event => {
-  //   event.preventDefault();
-  //   if (this.state.user) {
-  //     API.postStudent({
-  //       frstName: this.state.firstName,
-  //       lastName: this.state.lastName,
-  //       points: this.state.points,
-  //       userName: this.state.Input,
-  //       password: this.state.TextArea
-  //     })
-  //       .then(res => this.loadBooks())
-  //       .catch(err => console.log(err));
-  //   }
-  // };
-
-  render() {
-    return (
-      <Container fluid>
-        <Row>
-          <Col size="md-12">
-            <Nav />
+    render(){
+        if(!this.state.loggedIn){
+            return <div className="container">
             <form>
-              <Input
-                value={this.state.title}
-                onChange={this.handleInputChange}
-                name="firstName"
-                placeholder="First Name (required)"
-              />
-              <Input
-                value={this.state.author}
-                onChange={this.handleInputChange}
-                name="lastName"
-                placeholder="Last Name (required)"
-              />
-              <Input
-                value={this.state.title}
-                onChange={this.handleInputChange}
-                type="radio"
-                name="title"
-                placeholder="Student or Teacher (required)"
-              />
-              <Input
-                value={this.state.title}
-                onChange={this.handleInputChange}
-                name="title"
-                placeholder="What is your class? (required)"
-              />
-              <FormBtn
-                disabled={!(this.state.author && this.state.title)}
-                onClick={this.handleFormSubmit}
-              >
-                Submit Book
-              </FormBtn>
-            </form>
-          </Col>
-          <Col size="md-6 sm-12">
-            <Jumbotron>
-              <h1>Books On My List</h1>
-            </Jumbotron>
+            <div class="form-group">
+            Username: <input type="text" class="form-control" name="username" value={this.state.username} onChange={this.handleChange} />
+            </div>
+            <div class="form-group">
+            Password: <input type="password" class="form-control" name="password" value={this.state.password} onChange={this.handleChange} />
+            </div>
+            <button type="submit" class="btn btn-success" onClick={this.loginUser}>Login</button>
+            <NavLink to="/signup"> Signup </NavLink>
+        </form>
+        </div>
+        }
+        else {
+            return <Redirect to={{pathname: "/student", state: {loggedIn: true}}}/>
+        }
+    }
 
-          </Col>
-        </Row>
-        <Footer />
-      </Container>
-    );
-  }
 }
 
-export default SignIn;
+export default Login;
