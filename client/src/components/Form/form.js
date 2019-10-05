@@ -5,26 +5,79 @@ import { Container, Row } from '../Grid/index.js';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlayCircle } from "@fortawesome/free-regular-svg-icons"
 
-export function Input(props) {
+export function FirstName() {
+    return (
+        <div>
+            <div className="input-group">
+                <div className="input-group-prepend">
+                    <span className="input-group-text">First Name</span>
+                </div>
+                <input type="text" aria-label="First name" className="form-control" value={this.state.username} onChange={this.handleChange}/>
+            </div>
+
+        </div>
+    );
+}
+
+export function LastName() {
+    return (
+        <div>
+            <div className="input-group">
+                <div className="input-group-prepend">
+                    <span className="input-group-text">Last Name</span>
+                </div>
+                <input type="text" aria-label="Last name" className="form-control" value={this.state.password} onChange={this.handleChange}/>
+            </div>
+            <br></br>
+        </div>
+    )
+}
+
+export function Header() {
     return (
         <Container className="App">
             <Row>
-                <h1>Sign In</h1>
+                <h2 className="logIn">Login</h2>
                 <br></br>
-                <div className="form-group">
-                    <h2>Username</h2>
-                    <input type="text" className="form-control" {...props} />
-                </div>
             </ Row>
         </ Container>
     );
 }
 
+export function HeaderTwo() {
+    return (
+        <Container className="App">
+            <Row>
+                <h2 className="signUp">Sign Up</h2>
+                <br></br>
+            </ Row>
+        </ Container>
+    )
+}
+
+export function Input(props) {
+    return (
+        <div>
+            <div className="input-group">
+                <div className="input-group-prepend">
+                    <span className="input-group-text">Username</span>
+                </div>
+                <input type="text" aria-label="Username" className="form-control" />
+            </div>
+            <br></br>
+        </div>
+    );
+}
+
 export function TextArea(props) {
     return (
-        <div className="form-group">
-            <h2>Password</h2>
-            <input type="text" className="form-control" rows="12" {...props} />
+        <div>
+            <div className="input-group">
+                <div className="input-group-prepend">
+                    <span className="input-group-text">Password</span>
+                </div>
+                <input type="text" aria-label="Password" className="form-control" />
+            </div>
         </div>
     );
 }
@@ -33,37 +86,48 @@ export function FormBtn(props) {
     return (
         <div>
             <button {...props} type="submit" className="btn">{props.children}
-            Submit
+                Submit
             </button>
         </div>
     );
 }
 
-export function TeacherDrop(props) {
+export function TeacherDrop() {
     return (
         <form action="#">
             <fieldset>
                 <legend>Select Your Occupation</legend>
                 <p>
-                    <label>Select which Teacher...</label>
-                    <select id="myRole">
-                        <option value="default">Select...</option>
-                        <option value="teacherOne">Teacher</option>
-                        <option value="teacherTwo">Student</option>
-                    </select>
+                    <label className="teacher">Select which Teacher...</label>
+                    <br></br>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                        <div class="dropdown-menu"></div>
+                        <div class="dropdown-menu">
+                            <option value="default">Select...</option>
+                            <option value="teacherOne">Teacher</option>
+                            <option value="teacherTwo">Student</option>
+                            {/* <select id="myRole">
+                            <option value="default">Select...</option>
+                            <option value="teacherOne">Teacher</option>
+                            <option value="teacherTwo">Student</option>
+                        </select> */}
+                        </div>
+                    </div>
                 </p>
             </fieldset>
         </form>
     );
 }
 
-export function ClassDrop(props) {
+export function ClassDrop() {
     return (
         <form action="#">
             <fieldset>
                 <legend>Selecting Your Schedule</legend>
                 <p>
-                    <label>Select the class schedule...</label>
+                    <label className="schedule">Select the class schedule...</label>
+                    <br></br>
                     <select id="myClass">
                         <option value="default">Select..</option>
                         <option value="1">Mon/Wed/Sat</option>
@@ -106,6 +170,8 @@ export function TDrop2 (props){
         </form>
     )
 }
+<<<<<<< HEAD:client/src/components/Form/index.js
+=======
 
 export function RosterBtn(props) {
     return (
@@ -139,3 +205,4 @@ export function PlayBtn(props) {
         </div>
     );
 }
+>>>>>>> 459b053ad251fcb77689ee53cf8ca024194d5dbf:client/src/components/Form/form.js

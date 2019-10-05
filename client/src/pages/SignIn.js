@@ -1,29 +1,38 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
+import { Container, Row, Col } from '../components/Grid';
+import Nav from "..components/Nav";
+import { Input, TextArea, FormBtn } from "../components/Form";
+import Footer from "../../components/Footer/footer"
+=======
 import { Col, Row, Container } from "../components/Grid";
 import Nav from "../components/Nav/nav";
 import { Input, TextArea, FormBtn } from "../components/Form/form";
 import Footer from "../components/Footer/footer";
 import Jumbotron from "../components/Jumbotron/jumbotron"
+>>>>>>> 459b053ad251fcb77689ee53cf8ca024194d5dbf
 
 class SignIn extends Component {
-    state = {
-        user: {},
-    };
+  state = {
+    user: {},
+  };
 
-    handleFormSubmit = event => {
-        event.preventDefault();
-        if (this.state.user) {
-          API.saveBook({
-            title: this.state.title,
-            author: this.state.author,
-            synopsis: this.state.synopsis
-          })
-            .then(res => this.loadBooks())
-            .catch(err => console.log(err));
-        }
-      };
+  // handleFormSubmit = event => {
+  //   event.preventDefault();
+  //   if (this.state.user) {
+  //     API.postStudent({
+  //       frstName: this.state.firstName,
+  //       lastName: this.state.lastName,
+  //       points: this.state.points,
+  //       userName: this.state.Input,
+  //       password: this.state.TextArea
+  //     })
+  //       .then(res => this.loadBooks())
+  //       .catch(err => console.log(err));
+  //   }
+  // };
 
   render() {
     return (
@@ -77,3 +86,5 @@ class SignIn extends Component {
     );
   }
 }
+
+export default SignIn;
