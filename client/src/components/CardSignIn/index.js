@@ -4,7 +4,6 @@ import { Input, TextArea, FormBtn, TeacherDrop, ClassDrop } from '../Form/form';
 
 import Axios from "axios"
 import { Redirect, NavLink } from "react-router-dom"
-import './style.css';
 
 
 class CardSignIn extends React.Component {
