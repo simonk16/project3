@@ -1,6 +1,6 @@
 import React from "react";
 import Axios from "axios"
-import {Redirect} from "react-router-dom"
+// import {Redirect} from "react-router-dom"
 import './style.css';
 import { Header, Input, TextArea, FormBtn } from '../Form/index.js';
 
