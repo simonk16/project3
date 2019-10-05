@@ -1,11 +1,19 @@
 import React from "react";
-import "../../assets/css/teacherslanding.css";
+import { NavLink } from "react-router-dom"
+class TeachersLanding extends React.Component {
+    render() {
+        return (
+            <div>
+                <div>Welcome Teacher</div>
 
-const TeachersLanding = (props) => {
-    return (
-    <div>
-        <h1>Welcome Teacher</h1>
-    </div>
-    )
-}   
+                <div>
+                    <ul>Classes
+                        <li><NavLink to="/game">T/Th</NavLink></li>
+                    </ul>
+                </div>
+            </div>
+        )
+    }
+
+}
 export default TeachersLanding;

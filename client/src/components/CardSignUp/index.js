@@ -1,4 +1,5 @@
 import React from "react";
+
 import '../../assets/css/CardSignUp.css';
 import { Input, TextArea, FormBtn, TeacherDrop, ClassDrop } from '../Form/form';
 
@@ -15,6 +16,7 @@ function CardSignUp() {
             <FormBtn />
         </div>
     );
+
 }
 
 export default CardSignUp;
