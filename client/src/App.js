@@ -6,7 +6,7 @@ import { Route, BrowserRouter, Switch } from "react-router-dom";
 // import CardSignUp from './components/CardSignUp'
 
 import TProfile from './pages/Teacher/TProfile';
-// import TeachersLanding from './components/TeachersLanding/TeachersLanding';
+import SignUp from './pages/SignUp';
 
 
 // import Login from "./components/login/login"
@@ -18,9 +18,8 @@ const App = () => {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={CardSignIn} />
-        <Route exact path="/signup" component={CardSignUp} />
-        <Route exact path="/signup" component={StudentsLanding} />
-        <Route exact path="/teacher" component={TeachersLanding} />
+        <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/teacher" component={TProfile} />
       </Switch>
     </BrowserRouter>
   );
