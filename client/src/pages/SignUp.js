@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from '../components/Grid';
-import Nav from "..components/Nav";
+import Nav from "../components/Nav/nav";
 // import { Input, TextArea, FormBtn } from "../components/Form";
-import CardSignUp from './components/CardSignUp'
-import Footer from "../components/Footer";
+import CardSignUp from '../components/CardSignUp/index';
+import Footer from "../components/Footer/footer";
 import API from '../utils/API';
 
 class SignUp extends Component {
