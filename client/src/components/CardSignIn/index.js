@@ -31,10 +31,11 @@ class CardSignIn extends React.Component {
                 <ClassDrop />
                 <br></br>
                 <FormBtn />
+                </div>
 )
     }
          
-
+}
 
 
 
