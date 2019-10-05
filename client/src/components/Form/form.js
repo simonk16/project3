@@ -12,7 +12,7 @@ export function FirstName() {
                 <div className="input-group-prepend">
                     <span className="input-group-text">First Name</span>
                 </div>
-                <input type="text" aria-label="First name" className="form-control" value={this.state.username} onChange={this.handleChange}/>
+                <input type="text" aria-label="First name" className="form-control" />
             </div>
 
         </div>
@@ -26,7 +26,7 @@ export function LastName() {
                 <div className="input-group-prepend">
                     <span className="input-group-text">Last Name</span>
                 </div>
-                <input type="text" aria-label="Last name" className="form-control" value={this.state.password} onChange={this.handleChange}/>
+                <input type="text" aria-label="Last name" className="form-control" />
             </div>
             <br></br>
         </div>
@@ -100,20 +100,20 @@ export function TeacherDrop() {
                 <p>
                     <label className="teacher">Select which Teacher...</label>
                     <br></br>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
-                        <div class="dropdown-menu"></div>
-                        <div class="dropdown-menu">
+                    {/* <div class="btn-group">
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" /> */}
+                        {/* <div class="dropdown-menu"></div> */}
+                        {/* <div class="dropdown-menu">
+                            <option value="default">Select...</option>
+                            <option value="teacherOne">Teacher</option>
+                            <option value="teacherTwo">Student</option> */}
+                            <select id="myRole">
                             <option value="default">Select...</option>
                             <option value="teacherOne">Teacher</option>
                             <option value="teacherTwo">Student</option>
-                            {/* <select id="myRole">
-                            <option value="default">Select...</option>
-                            <option value="teacherOne">Teacher</option>
-                            <option value="teacherTwo">Student</option>
-                        </select> */}
-                        </div>
-                    </div>
+                        </select>
+                        {/* </div> */}
+                    {/* </div> */}
                 </p>
             </fieldset>
         </form>

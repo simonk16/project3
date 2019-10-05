@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './assets/css/reset.css'
+import "./assets/css/reset.css"
 import App from './App';
 import TProfile from "./pages/Teacher/TProfile";
 import SignIn from "./pages/SignIn";
