@@ -3,7 +3,8 @@ import "../../assets/css/form.css";
 import "../../assets/css/buttons.css";
 import { Container, Row } from '../Grid/index.js';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlayCircle } from "@fortawesome/free-regular-svg-icons"
+import { faPlayCircle } from "@fortawesome/free-regular-svg-icons";
+import {Redirect, NavLink} from "react-router-dom";
 
 export function FirstName() {
     return (
@@ -88,6 +89,7 @@ export function FormBtn(props) {
             <button {...props} type="submit" className="btn">{props.children}
                 Submit
             </button>
+            <NavLink to="/signup"> Signup </NavLink>
         </div>
     );
 }
@@ -100,20 +102,11 @@ export function TeacherDrop() {
                 <p>
                     <label className="teacher">Select which Teacher...</label>
                     <br></br>
-                    {/* <div class="btn-group">
-                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" /> */}
-                        {/* <div class="dropdown-menu"></div> */}
-                        {/* <div class="dropdown-menu">
-                            <option value="default">Select...</option>
-                            <option value="teacherOne">Teacher</option>
-                            <option value="teacherTwo">Student</option> */}
-                            <select id="myRole">
-                            <option value="default">Select...</option>
-                            <option value="teacherOne">Teacher</option>
-                            <option value="teacherTwo">Student</option>
-                        </select>
-                        {/* </div> */}
-                    {/* </div> */}
+                    <select id="myRole">
+                        <option value="default">Select...</option>
+                        <option value="teacherOne">Teacher</option>
+                        <option value="teacherTwo">Student</option>
+                    </select>
                 </p>
             </fieldset>
         </form>
@@ -139,7 +132,7 @@ export function ClassDrop() {
     );
 }
 
-export function TDrop1 (props){
+export function TDrop1(props) {
     return (
         <form action="#">
             <fieldset>
@@ -155,7 +148,7 @@ export function TDrop1 (props){
     );
 }
 
-export function TDrop2 (props){
+export function TDrop2(props) {
     return (
         <form action="#">
             <fieldset>
@@ -197,9 +190,9 @@ export function PlayBtn(props) {
 
         <div>
             <FontAwesomeIcon
-            icon={faPlayCircle} size="4x" id="playbtn" type="submit">
-            {/* {...props} >{props.children}  */}
-            Play
+                icon={faPlayCircle} size="4x" id="playbtn" type="submit">
+                {/* {...props} >{props.children}  */}
+                Play
             </FontAwesomeIcon>
         </div>
     );

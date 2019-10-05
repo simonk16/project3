@@ -7,6 +7,7 @@ import CardSignUp from './components/CardSignUp/index'
 
 // import Stats from "./pages/Stats";
 import TProfile from './pages/Teacher/TProfile';
+import SignUp from './pages/SignUp';
 
 
 // import Login from "./components/login/login"
@@ -18,8 +19,7 @@ const App = () => {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={CardSignIn} />
-        <Route exact path="/signup" component={CardSignUp} />
-        <Route exact path="/signup" component={StudentsLanding} />
+        <Route exact path="/signup" component={SignUp} />
         <Route exact path="/teacher" component={TProfile} />
       </Switch>
     </BrowserRouter>
