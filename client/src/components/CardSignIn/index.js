@@ -1,8 +1,11 @@
 import React from "react";
+import '../../assets/css/cardsignin.css';
+import { Input, TextArea, FormBtn, TeacherDrop, ClassDrop } from '../Form/form';
+
 import Axios from "axios"
-// import {Redirect} from "react-router-dom"
+import { Redirect, NavLink } from "react-router-dom"
 import './style.css';
-import { Header, Input, TextArea, FormBtn } from '../Form/index.js';
+
 
 class CardSignIn extends React.Component {
     constructor(props) {
@@ -10,41 +13,31 @@ class CardSignIn extends React.Component {
         this.state = {
             username: "",
             password: "",
-            loggedIn: false
+            loggedIn: false,
+            isStudent: false
         }
     }
 
-    handleChange = (event) => {
-        this.setState({
-            [event.target.name]: event.target.value,
-        });
-    };
+    render() {
 
-    loginUser = (event) => {
-        event.preventDefault();
-        Axios.post("/loginUser", {
-            username: this.state.username,
-            password: this.state.password,
-        }).then((res) => {
-            localStorage.setItem('JWT', res.data.token);
-            this.setState({ loggedIn: true })
-            console.log("logged in")
-        }).catch((err) => {
-            console.log(err)
-        })
-    }
 
-    render () {
         return (
             <div className="userCard">
-                <Header />
                 <Input />
                 <TextArea />
                 <br></br>
+                <TeacherDrop />
+                <br></br>
+                <ClassDrop />
+                <br></br>
                 <FormBtn />
-            </div>
-        );
+                </div>
+)
     }
 }
+         
+
+
+
 
 export default CardSignIn;
