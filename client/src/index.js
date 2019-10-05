@@ -5,7 +5,7 @@ import App from './App';
 import TProfile from "./pages/Teacher/TProfile";
 import SignIn from "./pages/SignIn";
 import Class from "./pages/Class";
-import Student from "./pages/Student/Student";
+import Student from "./pages/Student";
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));

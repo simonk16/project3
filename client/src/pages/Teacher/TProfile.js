@@ -2,12 +2,20 @@ import React, { Component } from "react";
 // import API from "../utils/API";
 // import { render } from "react-router-dom";
 import { Container, Row, Col } from "../../components/Grid";
-import Jumbotron from "./components/Jumbotron/jumbotron.js";
-import Nav from "./components/Nav/nav.js";
-import Footer from "./components/Footer/footer.js";
+// import Jumbotron from "./components/Jumbotron/jumbotron.js";
+import Jumbotron from "../../components/Jumbotron/jumbotron.js";
 
-import TCard from "./components/TCard/TCard.js";
-import { RosterBtn, StatsBtn, PlayBtn } from "./components/Buttons/buttons.js"
+// import Nav from "./components/Nav/nav.js";
+import Nav from "../../components/Nav/nav.js";
+
+// import Footer from "./components/Footer/footer.js";
+import Footer from "../../components/Footer/footer";
+
+
+import TCard from "../../components/TCard/TCard.js";
+// import { RosterBtn, StatsBtn, PlayBtn } from "./components/Form/form"
+import { RosterBtn, StatsBtn, PlayBtn } from "../../components/Form/form"
+
 
 class TProfile extends Component {
   render() {
