@@ -1,14 +1,14 @@
 import React from 'react';
 import { Route, BrowserRouter, Switch } from "react-router-dom";
 // import "fontawesome";
-import StudentsLanding from './components/studentsLanding/StudentsLanding';
-import CardSignIn from './components/CardSignIn/index';
-import CardSignUp from './components/CardSignUp/index'
+// import Student from './components/Student';
+// import CardSignIn from './components/CardSignIn';
+// import CardSignUp from './components/CardSignUp'
 
-// import Stats from "./pages/Stats";
 import TProfile from './pages/Teacher/TProfile';
 import SignUp from './pages/SignUp';
 
+import CardSignIn from './components/CardSignIn';
 
 // import Login from "./components/login/login"
 // import Signup from "./components/signup/signup";
