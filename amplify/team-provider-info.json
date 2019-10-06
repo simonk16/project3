@@ -1,0 +1,19 @@
+{
+    "prod": {
+        "awscloudformation": {
+            "AuthRoleName": "picku-prod-20191006115131-authRole",
+            "UnauthRoleArn": "arn:aws:iam::758186222091:role/picku-prod-20191006115131-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::758186222091:role/picku-prod-20191006115131-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "picku-prod-20191006115131-deployment",
+            "UnauthRoleName": "picku-prod-20191006115131-unauthRole",
+            "StackName": "picku-prod-20191006115131",
+            "StackId": "arn:aws:cloudformation:us-east-2:758186222091:stack/picku-prod-20191006115131/8c3ef3a0-e859-11e9-a773-022c6f51bf82"
+        },
+        "categories": {
+            "auth": {
+                "picku631a468d": {}
+            }
+        }
+    }
+}

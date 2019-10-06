@@ -1,0 +1,9 @@
+{
+	"auth": {
+		"picku631a468d": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	}
+}
