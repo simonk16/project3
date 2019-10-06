@@ -82,6 +82,11 @@ app.post('/registerUser', (req, res, next) => {
     })(req, res, next);
   });
 
+  app.get('/logout', (req, res) => {
+    req.logout();
+    res.redirect('/');
+  });
+
 app.use(routes);
 
 
