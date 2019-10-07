@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+<<<<<<< HEAD
 // import '/assets/reset.css'
+=======
+import "./assets/css/reset.css"
+>>>>>>> origin/master
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

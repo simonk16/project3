@@ -4,7 +4,7 @@ const BCRYPT_SALT_ROUNDS = 12;
 
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
-const User = require('../models/student');
+const db = require('../models/');
 
 passport.use(
   'register',
@@ -20,8 +20,8 @@ passport.use(
       console.log(req.body.email);
 
       try {
-        User.findOne({"username": username 
-        }).then(user => {
+        db.Student.findOne({where: {userName: username 
+        }}).then(user => {
           if (user != null) {
             console.log('username or email already taken');
             return done(null, false, {
@@ -29,10 +29,12 @@ passport.use(
             });
           }
           bcrypt.hash(password, BCRYPT_SALT_ROUNDS).then(hashedPassword => {
-            User.create({
-              username,
+            db.Student.create({
+              userName: username,
               password: hashedPassword,
-              email: req.body.email,
+              firstName: req.body.firstName,
+              lastName: req.body.lastName,
+              ClassId: req.body.ClassId
             }).then(user => {
               console.log('user created');
               return done(null, user);
@@ -56,7 +58,7 @@ passport.use(
     },
     (username, password, done) => {
       try {
-        User.findOne({"username": username}).then(user => {
+        db.Student.findOne({where: {userName: username}}).then(user => {
           if (user === null) {
             return done(null, false, { message: 'bad username' });
           }
