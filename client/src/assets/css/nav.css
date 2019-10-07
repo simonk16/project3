@@ -1,11 +1,7 @@
 body,
 html {
-<<<<<<< HEAD:client/src/components/Nav/style.css
-    background: url("/assets/images/background.png") no-repeat center center fixed;
-=======
     /* background: url("../../assets/images/background.png") no-repeat center center fixed; */
     background-color: #E3F2FD;
->>>>>>> origin/master:client/src/assets/css/nav.css
 }
 
 .header {
