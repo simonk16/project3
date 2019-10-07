@@ -14,3 +14,18 @@
 #playbtn {
     -webkit-appearance: none
 }
+
+.btn-dark {
+    height: 30px;
+    width: 160px;
+    margin-left: 150px;
+    margin-top: 10px;
+    background-color: #BBDEFB;
+    color: #F4511E;
+}
+
+.btn-dark:hover {
+    background-color: #1565C0;
+    color: #FFCCBC;
+    border-color: #1565C0;
+}
