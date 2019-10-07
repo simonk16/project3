@@ -41,12 +41,10 @@ module.exports = {
     },
 
     findStudentsByClass: (req, res) => {
-        // console.log("findStudentByClass endpoint", req.params);
-        // res.json(req.params);
 
         db.Student.findAll({
             where: {
-                classId: req.params.ClassId
+                ClassId: req.params.ClassId
             }
         }).then(students => {
             res.json(students)
@@ -68,18 +66,39 @@ module.exports = {
     },
 
     updateStudentPoints: (req, res) => {
-        
-        db.Student.update({
-            points: req.body.points
-        }, {
+
+        db.Student.findOne({
             where: {
                 id: req.params.id
             }
-        }).then(updatedStudent => {
-            res.json(updatedStudent)
-        }).catch(err => {
-            res.json(err)
-        })
+        }).then(student => {
+            return student.increment("points", {by: 1}).then(student => {
+                student.reload();
+                res.json(student)
+            }).catch(err2 => {
+                res.json(err2)
+            })
+        }).catch(err1 => {
+            res.json(err1)
+        });
+
+        // db.Student.find({
+        //     where: {
+        //         id: req.params.id
+        //     }
+        // }).then(student => {
+        //     const newScore = student.points + 1
+        //     db.Student.update({
+        //         points: newScore
+        //     }, ).then(updatedStudent => {
+        //         res.json(updatedStudent)
+        //     }).catch(err2 => {
+        //         res.json(err2)
+        //     })
+        // }).catch(err1 => {
+        //     res.json(err1)
+        // })
+
     }
 
 

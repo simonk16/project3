@@ -1,21 +1,21 @@
-import axios from 'axios';
+import Axios from 'axios';
+
 
 export default {
     getStudents: async function(){
         try {
-            const response = await axios.get("/api/students")
+            const response = await Axios.get("/api/students")
             return response;
         } catch (error) {
             return error
         }
     },
-    StudentsByClass: async function() {
-        try {
-            const response = await axios.get()
-            return response;
-        } catch (error) {
-            return error
-        }
+    StudentsByClass:  (x) => {
+        Axios.get("/api/findStudentsByClass/" + x).then(response => {
+            return response
+        }).catch(err => {
+            console.log(err)
+        })
     }
     // asyncExample: async function () {
         // axios.get("/somRoute")

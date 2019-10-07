@@ -5,13 +5,45 @@ import Axios from 'axios';
 export default class game extends Component {
     state = {
         students: [],
-        randomStudent: "",
+        randomStudent: {},
         chosenStudents: [],
-        points: ""
+        points: "",
+        selectedClass: "" 
 
     }
-    componentDidMount() {
-        this.getStudents();
+    // componentDidMount() {
+    //     this.getStudents();
+    // }
+
+    onChange = (e) => {
+        let oldState = this.state
+        oldState.selectedClass = e.target.value
+        this.setState(oldState)
+        console.log(this.state.selectedClass)  
+        const selectedClass = this.state.selectedClass
+        console.log(selectedClass)
+        if (selectedClass === "3"){
+            Axios.get("/api/students").then(response =>{
+                const oldState = this.state
+                oldState.students = response.data
+                this.setState(oldState)
+                console.log(this.state.students)
+           }).catch(err => {
+               console.log(err)
+           })
+        } else {
+
+            Axios.get("/api/students/findStudentsByClass/" + selectedClass).then(response => {
+                console.log("LINE 24 " +response);
+                const oldState = this.state
+                oldState.students = response.data
+                this.setState(oldState)
+                console.log(this.state.students)
+            }).catch(err => {
+                console.log(err)
+            })
+        }
+
     }
     getStudents = async () => {
         const response = await API.getStudents();
@@ -22,6 +54,8 @@ export default class game extends Component {
         console.log("line 17: " + this.state.students)
     }
 
+    
+
     randomSelect = () => {
         let studentsArr = this.state.students;
         const keys = Object.keys(studentsArr);
@@ -29,21 +63,20 @@ export default class game extends Component {
         const item = studentsArr[randomIndex];
         console.log("line 26 code on game.js has chosen " + item.firstName);
 
-        this.setState({
-            randomStudent: item.firstName,
-            lastName: item.lastName,
-            points: item.points
-        });
-
+        let oldState = this.state;
+        oldState.randomStudent = item;
+        this.setState(oldState)
 
     }
 
     correctFunc = () => {
-        let newScore = this.state.points + 1;
-        this.setState({
-            points: newScore
-        });
-        Axios.put()
+        let thisStudentId = this.state.randomStudent.id
+        Axios.put(`/api/students/${thisStudentId}`).then(updatedStudent => {
+            const oldState = this.state;
+            oldState.points = updatedStudent.points
+        }).catch(err => {
+            console.log(err)
+        })
     }
 
     wrongFunc = () => {
@@ -60,40 +93,44 @@ export default class game extends Component {
             <div class="container">
                 <div class="card w-75">
                     <div class="card-body">
-                        <h5 class="card-title">Select your Class by ClassId</h5>
-                        <form>
-                            <div class="form-group">
-                                <label htmlFor="formGroupExampleInput">Enter Class Id below</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input" />
-
-                                <input class="btn btn-primary" type="submit" value="Submit" />
-
-                            </div>
-
+                        <form action="#">
+                            <fieldset>
+                                <legend>Selecting Your Class</legend>
+                                <p>
+                                    <br></br>
+                                    <select onChange ={this.onChange} name="selectedClass" id="myClass">
+                                        <option value="default">Select..</option>
+                                        <option name="selectedClass" value="2">Mon/Wed</option>
+                                        <option name="selectedClass" value="1">Tue/Thu</option>
+                                        <option name="selectedClass" value="3">Saturday</option>
+                                    </select>
+                                </p>
+                            </fieldset>
                         </form>
+
                     </div>
                 </div>
 
-                
+
 
 
 
                 <div class="card w-75">
                     <div class="card-body">
                         <h5 class="card-title">List of Students</h5>
-                        <p class="card-text">{this.state.randomStudent}</p>
-                        <p class="card-text">{this.state.lastName}</p>
-                        <p class="card-text">{this.state.points}</p>
-
+                            <ul>
+                            {this.state.students.map(student => {
+                                return <li>{student.firstName}</li>
+                            })}   
+                            </ul>                     
                     </div>
                 </div>
-                
+
                 <div class="card w-75">
                     <div class="card-body">
                         <h5 class="card-title">Click to button to select a Student!</h5>
-                        <p class="card-text">{this.state.randomStudent}</p>
-                        <p class="card-text">{this.state.lastName}</p>
-                        <p class="card-text">{this.state.points}</p>
+                        <p class="card-text">{this.state.randomStudent.firstName}  {this.state.randomStudent.lastName}</p>
+                        <p class="card-text">{this.state.randomStudent.points}</p>
 
                         <a href="#" class="btn btn-primary" onClick={this.randomSelect}>Select</a>
                         <a href="#" class="btn btn-primary" onClick={this.correctFunc}>Right</a>
