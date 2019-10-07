@@ -2,7 +2,7 @@ import React from "react";
 import '../../assets/css/nav.css';
 import logoImg from '../../assets/images/logo3.png';
 import homeImg from '../../assets/images/home.png';
-import extImg from '../../assets/images/exit.png';
+import extImg from "../../assets/images/exit.png";
 
 function Nav() {
     return (
