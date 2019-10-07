@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlayCircle } from "@fortawesome/free-regular-svg-icons";
 import {Redirect, NavLink} from "react-router-dom";
 
+
+
 export function FirstName() {
     return (
         <div>
@@ -168,9 +170,9 @@ export function TDrop2(props) {
 export function RosterBtn(props) {
     return (
         <div>
-            <button {...props} type="submit" className="btn">{props.children}
-                Roster
-                </button>
+            <button {...props} type="button" className="btn" data-toggle="popover" title="Popover title"> {props.children} 
+            Roster
+            </button>
         </div>
     );
 }
