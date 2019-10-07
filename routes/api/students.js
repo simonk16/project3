@@ -5,6 +5,8 @@ router.route("/")
     .get(studentsController.getStudents)
     .post(studentsController.postStudent);
 
+
+
 router.route("/:id")
     .get(studentsController.findOneStudent)
     .delete(studentsController.deleteById)
