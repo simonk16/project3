@@ -15,8 +15,10 @@ input[type=password] {
 .signUp {
     font-size: 32px !important;
     text-align: center !important;
-    color: #1565C0 !important;
+    color: rgb(4, 3, 73) !important;
+    text-decoration: none;
 }
+
 
 .teacher,
 .schedule {
@@ -35,6 +37,7 @@ input[type=password] {
 .btn {
     position: inherit;
     margin-bottom: 10px;
+    margin-right: 10px;
     /* width: 100px; */
     height: 37px;
     border-radius: 8px;

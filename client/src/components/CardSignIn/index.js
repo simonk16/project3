@@ -2,6 +2,7 @@ import React from "react";
 import Axios from "axios";
 import {Redirect, NavLink} from "react-router-dom";
 import '../../assets/css/cardsignin.css';
+import { TextArea, Input, TeacherDrop, FormBtn, ClassDrop } from "../Form/form";
 
 
 class CardSignIn extends React.Component {

@@ -96,6 +96,16 @@ export function FormBtn(props) {
     );
 }
 
+export function SubmitBtn(props) {
+    return (
+        <div>
+            <button {...props} type="submit" className="btn">{props.children}
+                Submit
+            </button>
+        </div>
+    );
+}
+
 export function TeacherDrop() {
     return (
         <form action="#">

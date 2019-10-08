@@ -8,11 +8,6 @@ import { Route, BrowserRouter, Switch } from "react-router-dom";
 import TProfile from './pages/Teacher/TProfile';
 import CardSignIn from './components/CardSignIn';
 import SignUp from './pages/SignUp';
-<<<<<<< HEAD
-import CardSignIn from './components/CardSignIn';
-=======
-
->>>>>>> origin
 
 // import Login from "./components/login/login"
 // import Signup from "./components/signup/signup";

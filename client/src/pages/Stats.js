@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import Jumbotron from "../components/Jumbotron/jumbotron";
 import Nav from "../components/Nav/nav";
-import Footer from "../components/Footer/footer";
 import { Container, Row, Col } from "../components/Grid";
 import { RosterBtn, PlayBtn, StatsBtn } from "../components/Form/form";
 import ClassStats from "../components/Stats/stats";
@@ -32,7 +31,6 @@ class Stats extends Component {
                         </Col>
                     </Row>
                 </Container>
-                <Footer />
             </div>
         );
     }

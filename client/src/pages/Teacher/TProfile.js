@@ -8,10 +8,6 @@ import Jumbotron from "../../components/Jumbotron/jumbotron.js";
 // import Nav from "./components/Nav/nav.js";
 import Nav from "../../components/Nav/nav.js";
 
-// import Footer from "./components/Footer/footer.js";
-import Footer from "../../components/Footer/footer";
-
-
 import TCard from "../../components/TCard/TCard.js";
 // import { RosterBtn, StatsBtn, PlayBtn } from "./components/Form/form"
 import { RosterBtn, StatsBtn, PlayBtn } from "../../components/Form/form"
@@ -46,7 +42,6 @@ class TProfile extends Component {
             </Col>
           </Row>
         </Container>
-        <Footer />
       </div>
     );
   }

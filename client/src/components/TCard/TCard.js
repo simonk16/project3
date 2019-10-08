@@ -1,6 +1,6 @@
 import React from "react";
 import "../../assets/css/tcard.css";
-import {TDrop1, FormBtn } from "../Form/form";
+import {TDrop1, SubmitBtn } from "../Form/form";
 // import {Container, Row} from "../Grid/index"
 
 
@@ -10,7 +10,7 @@ function TCard() {
                 <br></br>
                     <TDrop1/>
                     <br/>
-                    <FormBtn/>
+                    <SubmitBtn/>
         </div>
     );
 }
