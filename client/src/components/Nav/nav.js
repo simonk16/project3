@@ -1,6 +1,6 @@
 import React from "react";
 import Axios from "axios";
-import {Redirect, NavLink, Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import '../../assets/css/nav.css';
 import logoImg from '../../assets/images/logo3.png';
 import homeImg from '../../assets/images/home.png';
@@ -18,7 +18,7 @@ function Nav() {
                 <img className="raise" id="img" type="button" src={homeImg} alt="home" />
                 </Link>
                 <Link to="/">
-                <img className="raise" id="img" type="button" src={extImg} alt="logout" />
+                <img className="raise" id="img" type="button" src={extImg} alt="logout" onClick={this.logout()} />
                 </Link>
             </div>
         </div>

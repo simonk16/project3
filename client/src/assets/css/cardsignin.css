@@ -19,3 +19,13 @@ body {
     border-radius: 5px;
 
 }
+a {
+    color: #E3F2FD;
+    font-size: 20px;
+    font-weight: bold;
+    border-color: #E3F2FD !important;
+}
+a:hover{
+    color: #1848A0 ;
+    text-decoration: none
+}
