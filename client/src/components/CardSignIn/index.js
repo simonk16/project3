@@ -1,7 +1,7 @@
 import React from "react";
 import Axios from "axios";
 import {Redirect, NavLink} from "react-router-dom";
-// import './style.css';
+import '../../assets/css/cardsignin.css';
 
 
 class CardSignIn extends React.Component {

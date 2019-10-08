@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from '../components/Grid';
-import Nav from "../components/Nav/nav";
 // import { Input, TextArea, FormBtn } from "../components/Form";
 import CardSignUp from '../components/CardSignUp/index';
-import Footer from "../components/Footer/footer";
 import API from '../utils/API';
 
 class SignUp extends Component {
@@ -30,14 +28,12 @@ class SignUp extends Component {
   render() {
     return (
       <div>
-        <Nav />
         <Container>
           <Row>
-            <Col size="md-6">
+            <Col size="md-12">
               <CardSignUp />
             </Col>
           </Row>
-          <Footer />
         </Container>
       </div>
     );
