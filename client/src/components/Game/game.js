@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import API from '../../utils/API'
 import Axios from 'axios';
+import '../../assets/css/game.css';
+import Nav from '../Nav/nav';
+import Footer from '../Footer/footer';
 
 export default class game extends Component {
     state = {
@@ -130,53 +133,63 @@ export default class game extends Component {
 
     render() {
         return (
-            <div class="container">
-                <div class="card w-75">
-                    <div class="card-body">
-                        <form action="#">
-                            <fieldset>
-                                <legend>Selecting Your Class</legend>
-                                <p>
-                                    <br></br>
-                                    <select onChange={this.onChange} name="selectedClass" id="myClass">
-                                        <option value="default">Select..</option>
-                                        <option name="selectedClass" value="2">Mon/Wed</option>
-                                        <option name="selectedClass" value="1">Tue/Thu</option>
-                                        <option name="selectedClass" value="3">Saturday</option>
-                                    </select>
-                                </p>
-                            </fieldset>
-                        </form>
+            <div>
 
+                <Nav />
+
+                <div class="container">
+
+
+                    <div class="card w-75">
+                        <div class="card-body">
+                            <form action="#">
+                                <fieldset>
+                                    <legend>Select Your Class</legend>
+                                    <p>
+                                        <br></br>
+                                        <select onChange={this.onChange} name="selectedClass" id="myClass">
+                                            <option value="default">Classes</option>
+                                            <option name="selectedClass" value="2">Mon/Wed</option>
+                                            <option name="selectedClass" value="1">Tue/Thu</option>
+                                            <option name="selectedClass" value="3">Saturday</option>
+                                        </select>
+                                    </p>
+                                </fieldset>
+                            </form>
+
+                        </div>
                     </div>
-                </div>
 
 
 
 
 
-                <div class="card w-75">
-                    <div class="card-body">
-                        <h5 class="card-title">List of Students</h5>
-                        <ul>
-                            {this.state.students.map(student => { return <li>{student.firstName}</li> })}
-                        </ul>
+                    <div class="card w-75">
+                        <div class="card-body">
+                            <h5 class="card-title">List of Students</h5>
+                            <ul>
+                                {this.state.students.map(student => { return <li>{student.firstName}</li> })}
+                            </ul>
+                        </div>
                     </div>
-                </div>
 
-                <div class="card w-75">
-                    <div class="card-body">
-                        <h5 class="card-title">Click to button to select a Student!</h5>
-                        <p class="card-text">{this.state.randomStudent.firstName}  {this.state.randomStudent.lastName}</p>
-                        <p class="card-text">{this.state.randomStudent.points}</p>
+                    <div class="card w-75">
+                        <div class="card-body">
+                            <h5 class="card-title">Click a button to select a Student!</h5>
+                            <p class="card-text">{this.state.randomStudent.firstName}  {this.state.randomStudent.lastName}</p>
+                            <p class="card-text">{this.state.randomStudent.points}</p>
+                            <br></br>
 
-                        <a href="#" class="btn btn-primary" onClick={this.randomSelect}>Select</a>
-                        <a href="#" class="btn btn-primary" onClick={this.correctFunc}>Right</a>
+                            <a href="#" class="btn btn-primary" id="gameButton" onClick={this.randomSelect}>Select</a>
+                            <a href="#" class="btn btn-primary" id="gameButton" onClick={this.correctFunc}>Right</a>
 
+                        </div>
                     </div>
-                </div>
 
+
+                </div>
             </div>
+
         )
     }
 }
