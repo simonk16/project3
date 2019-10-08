@@ -6,10 +6,9 @@ router.route("/")
     .post(studentsController.postStudent);
 
 
-
 router.route("/:id")
     .get(studentsController.findOneStudent)
-    .delete(studentsController.deleteById)
-
+    .put(studentsController.updateStudentPoints)
+    .delete(studentsController.deleteById);
 module.exports = router;
         
