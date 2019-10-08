@@ -65,8 +65,8 @@ app.post('/loginUser', (req, res, next) => {
         res.status(403).send(info.message);
       }
     } else {
-      User.findOne({
-        username: req.body.username
+      db.Student.findOne({
+        userName: req.body.username
       }).then(user => {
         const token = jwt.sign({
           id: user.id
@@ -95,7 +95,7 @@ app.use(routes);
 
 
 db.sequelize.sync({
-  force: true
+  force: false
 }).then(function () {
   app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);

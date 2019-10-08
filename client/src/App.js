@@ -8,6 +8,7 @@ import { Route, BrowserRouter, Switch } from "react-router-dom";
 import TProfile from './pages/Teacher/TProfile';
 import CardSignIn from './components/CardSignIn';
 import SignUp from './pages/SignUp';
+import game from './components/Game/game';
 
 
 // import Login from "./components/login/login"
@@ -21,6 +22,7 @@ const App = () => {
         <Route exact path="/" component={CardSignIn} />
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/teacher" component={TProfile} />
+        <Route exact path="/game" component={game} />
       </Switch>
     </BrowserRouter>
   );

@@ -5,6 +5,8 @@ router.route("/")
     .get(studentsController.getStudents)
     .post(studentsController.postStudent);
 
+router.route("/findStudentsByClass/:ClassId")
+    .get(studentsController.findStudentsByClass)
 
 router.route("/:id")
     .get(studentsController.findOneStudent)
