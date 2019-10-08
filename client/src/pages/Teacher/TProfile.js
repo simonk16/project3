@@ -10,6 +10,15 @@ import TCard from "../../components/TCard/TCard";
 import { RosterBtn, StatsBtn, PlayBtn } from "../../components/Form/form";
 
 class TProfile extends Component {
+  
+  state = {
+    students: [],
+    selectedClass: ""
+}
+
+
+
+
   render() {
     return (
       <div>
@@ -19,19 +28,19 @@ class TProfile extends Component {
           <Row fluid>
             <Col size="md-12">
               <Jumbotron>
-                
+
                 <br></br>
                 <TCard />
                 <br></br>
                 <Row>
                   <Col size="md-4">
-                  <RosterBtn />
+                    <RosterBtn />
                   </Col>
                   <Col size="md-4">
-                  <PlayBtn />
+                    <PlayBtn />
                   </Col>
                   <Col size="md-4">
-                  <StatsBtn />
+                    <StatsBtn />
                   </Col>
                 </Row>
               </Jumbotron>

@@ -111,10 +111,6 @@ export default class game extends Component {
                     </div>
                 </div>
 
-
-
-
-
                 <div class="card w-75">
                     <div class="card-body">
                         <h5 class="card-title">List of Students</h5>
