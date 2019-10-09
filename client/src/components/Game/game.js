@@ -168,7 +168,7 @@ export default class game extends Component {
                         <div class="card-body">
                             <h5 class="card-title">List of Students</h5>
                             <ul>
-                                {this.state.students.map(student => { return <li>{student.firstName}</li> })}
+                                {this.state.students.map(student => { return <li>{student.firstName + " " + student.lastName + " " + student.points}</li> })}
                             </ul>
                         </div>
                     </div>
