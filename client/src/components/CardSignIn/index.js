@@ -2,11 +2,9 @@ import React from "react";
 import Axios from "axios";
 import {Redirect, NavLink} from "react-router-dom";
 import '../../assets/css/cardsignin.css';
-import { TextArea, Input, TeacherDrop, FormBtn, ClassDrop } from "../Form/form";
 
-
-class CardSignIn extends React.Component {
-    constructor(props) {
+class Login extends React.Component{
+    constructor(props){
         super(props)
         this.state={
             username: "",
@@ -15,22 +13,25 @@ class CardSignIn extends React.Component {
         }
     }
 
-    render() {
+    handleChange = (event) => {
+        this.setState({
+          [event.target.name]: event.target.value,
+        });
+      };
 
-        return (
-            <div className="userCard">
-                <Input />
-                <TextArea />
-                <br></br>
-                <TeacherDrop />
-                <br></br>
-                <ClassDrop />
-                <br></br>
-                <FormBtn />
-            </div>
-        );
+    loginUser = (event)=>{
+        event.preventDefault();
+        Axios.post("/loginUser", {
+            username: this.state.username,
+            password: this.state.password,
+        }).then((res)=>{
+            localStorage.setItem('JWT', res.data.token);
+            this.setState({loggedIn: true})
+            console.log("logged in")
+        }).catch((err)=>{
+            console.log(err)
+        })
     }
-
 
     render(){
         if(!this.state.loggedIn){
@@ -42,7 +43,7 @@ class CardSignIn extends React.Component {
             <div class="form-group">
             Password: <input type="password" class="form-control" name="password" value={this.state.password} onChange={this.handleChange} />
             </div>
-            <button type="submit" class="btn btn-info" onClick={this.loginUser}>Login</button>
+            <button type="submit" class="btn btn-success" onClick={this.loginUser}>Login</button>
             <NavLink to="/signup"> Signup </NavLink>
         </form>
         </div>
@@ -51,6 +52,7 @@ class CardSignIn extends React.Component {
             return <Redirect to={{pathname: "/teacher", state: {loggedIn: true}}}/>
         }
     }
+
 }
 
-    export default CardSignIn;
+export default Login;
