@@ -5,7 +5,6 @@ import { Container, Row, Col } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron/jumbotron";
 import { Input, TextArea, FormBtn } from "../components/Form/form";
 import Nav from "../components/Nav/nav";
-import Footer from "../components/Footer/footer"
 
 class Class extends Component {
 
@@ -39,10 +38,8 @@ class Class extends Component {
         </Row>
         <Row>
           <Col size="md-2">
-            {/* <Link to="/">← Back to Authors</Link> */}
           </Col>
         </Row>
-        <Footer />
       </Container>
     );
   }

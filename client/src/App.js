@@ -1,9 +1,6 @@
 import React from 'react';
 import { Route, BrowserRouter, Switch } from "react-router-dom";
-// import "fontawesome";
-// import Student from './components/Student';
-// import CardSignIn from './components/CardSignIn';
-// import CardSignUp from './components/CardSignUp'
+
 
 import TProfile from './pages/Teacher/TProfile';
 import CardSignIn from './components/CardSignIn';

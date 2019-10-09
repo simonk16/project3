@@ -96,13 +96,20 @@ export function FormBtn(props) {
     );
 }
 
+<<<<<<< HEAD
+export function SubmitBtn(props) {
+=======
 export function FormBtnTeacherPage(props) {
+>>>>>>> origin/master
     return (
         <div>
             <button {...props} type="submit" className="btn">{props.children}
                 Submit
             </button>
+<<<<<<< HEAD
+=======
             {/* removed navlink */}
+>>>>>>> origin/master
         </div>
     );
 }
@@ -180,7 +187,7 @@ export function TDrop2(props) {
 
 export function RosterBtn(props) {
     return (
-        <div>
+        <div className="formbtns">
             <button {...props} type="button" className="btn" data-toggle="popover" title="Popover title"> {props.children} 
             Roster
             </button>
@@ -190,9 +197,9 @@ export function RosterBtn(props) {
 
 export function StatsBtn(props) {
     return (
-        <div>
+        <div className="formbtns">
             <button {...props} type="submit" className="btn">{props.children}
-                Standings
+                Statistics
                 </button>
         </div>
     );
@@ -204,8 +211,6 @@ export function PlayBtn(props) {
         <div>
             <FontAwesomeIcon
                 icon={faPlayCircle} size="4x" id="playbtn" type="submit">
-                {/* {...props} >{props.children}  */}
-                Play
             </FontAwesomeIcon>
         </div>
     );
