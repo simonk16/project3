@@ -96,6 +96,17 @@ export function FormBtn(props) {
     );
 }
 
+export function FormBtnTeacherPage(props) {
+    return (
+        <div>
+            <button {...props} type="submit" className="btn">{props.children}
+                Submit
+            </button>
+            {/* removed navlink */}
+        </div>
+    );
+}
+
 export function TeacherDrop() {
     return (
         <form action="#">
