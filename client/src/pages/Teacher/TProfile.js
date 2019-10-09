@@ -18,7 +18,7 @@ class TProfile extends Component {
       <div>
         <Nav />
         <br></br>
-        <Container fluid>
+        {/* <Container fluid> */}
           <Row fluid>
             <Col size="md-12">
               <Jumbotron>
@@ -29,7 +29,7 @@ class TProfile extends Component {
               </Jumbotron>
             </Col>
           </Row>
-        </Container>
+        {/* </Container> */}
       </div>
     );
   }

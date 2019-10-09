@@ -16,7 +16,7 @@ const App = () => {
         <Route exact path="/" component={CardSignIn} />
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/teacher" component={TProfile} />
-        <Route exact path="/stats" component={Stats} />
+        {/* <Route exact path="/stats" component={Stats} /> */}
       </Switch>
     </BrowserRouter>
   );
