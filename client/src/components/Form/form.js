@@ -96,12 +96,20 @@ export function FormBtn(props) {
     );
 }
 
+<<<<<<< HEAD
 export function SubmitBtn(props) {
+=======
+export function FormBtnTeacherPage(props) {
+>>>>>>> origin/master
     return (
         <div>
             <button {...props} type="submit" className="btn">{props.children}
                 Submit
             </button>
+<<<<<<< HEAD
+=======
+            {/* removed navlink */}
+>>>>>>> origin/master
         </div>
     );
 }

@@ -18,7 +18,8 @@ module.exports = {
         points: 50,
         createdAt: new Date(),
         updatedAt: new Date(),
-        ClassId: 1
+        ClassId: 1,
+        isStudent: true
       },
       {
         firstName: 'Ben',
@@ -26,7 +27,8 @@ module.exports = {
         points: 69,
         createdAt: new Date(),
         updatedAt: new Date(),
-        ClassId: 1
+        ClassId: 1,
+        isStudent: true
       },
       {
         firstName: 'Rachel',
@@ -34,7 +36,8 @@ module.exports = {
         points: 69,
         createdAt: new Date(),
         updatedAt: new Date(),
-        ClassId: 1
+        ClassId: 1,
+        isStudent: true
       },
       {
         firstName: 'Rachel',
@@ -42,7 +45,8 @@ module.exports = {
         points: 69,
         createdAt: new Date(),
         updatedAt: new Date(),
-        ClassId: 1
+        ClassId: 1,
+        isStudent: true
       }
     ], {});
   },
