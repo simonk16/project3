@@ -1,0 +1,14 @@
+{
+    "production": {
+        "awscloudformation": {
+            "AuthRoleName": "project3-production-20191008212122-authRole",
+            "UnauthRoleArn": "arn:aws:iam::758186222091:role/project3-production-20191008212122-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::758186222091:role/project3-production-20191008212122-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "project3-production-20191008212122-deployment",
+            "UnauthRoleName": "project3-production-20191008212122-unauthRole",
+            "StackName": "project3-production-20191008212122",
+            "StackId": "arn:aws:cloudformation:us-east-1:758186222091:stack/project3-production-20191008212122/7cfe9560-ea3b-11e9-9031-0e0a24f9b5c2"
+        }
+    }
+}
