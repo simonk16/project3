@@ -18,7 +18,7 @@ function Nav() {
                 <img className="raise" id="img" type="button" src={homeImg} alt="home" />
                 </Link>
                 <Link to="/">
-                <img className="raise" id="img" type="button" src={extImg} alt="logout" onClick={this.logout()} />
+                <img className="raise" id="img" type="button" src={extImg} alt="logout" /*onClick={this.logout()}*/ />
                 </Link>
             </div>
         </div>

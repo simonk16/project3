@@ -4,14 +4,12 @@ import React, { Component } from "react";
 import { Container, Row, Col } from "../../components/Grid";
 // import Jumbotron from "./components/Jumbotron/jumbotron.js";
 import Jumbotron from "../../components/Jumbotron/jumbotron.js";
-import { Link } from "react-router-dom";
 
 // import Nav from "./components/Nav/nav.js";
 import Nav from "../../components/Nav/nav.js";
 
 import TCard from "../../components/TCard/TCard.js";
-// import { RosterBtn, StatsBtn, PlayBtn } from "./components/Form/form"
-import { RosterBtn, StatsBtn, PlayBtn } from "../../components/Form/form"
+
 
 
 class TProfile extends Component {
@@ -28,23 +26,6 @@ class TProfile extends Component {
                 <br></br>
                 <TCard />
                 <br></br>
-                <Row>
-                  <Col size="md-4">
-                    <Link to="/roster">
-                  <RosterBtn />
-                  </Link>
-                  </Col>
-                  <Col size="md-4">
-                  <Link to="/game">
-                  <PlayBtn />
-                  </Link>
-                  </Col>
-                  <Col size="md-4">
-                  <Link to="/stats">
-                  <StatsBtn />
-                  </Link>
-                  </Col>
-                </Row>
               </Jumbotron>
             </Col>
           </Row>

@@ -61,3 +61,6 @@ input[type=submit] {
 legend{
     color: #BBDEFB;
 }
+.formbtns{
+    margin-top: 20px;
+}
