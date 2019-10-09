@@ -1,6 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router-dom"
 import '../../assets/css/CardSignUp.css';
+import logo from '../../assets/images/logo3.png';
 import Axios from "axios"
 
 class CardSignUp extends React.Component {
@@ -49,16 +50,35 @@ class CardSignUp extends React.Component {
     
     render(){
         if(!this.state.signedUp) {
-        return <div className="container">
-        <form>
+        return <div className="container" className="d-flex justify-content-end">
+        <form className= "userCard2">
+            <div class="d-flex justify-content-center">
+                <div class="brand_logo_container">
+                        <img src={ logo } class="brand_logo" alt="Logo" />
+                </div>
+            </div>
         First name: <input type="text" name="firstName" class="form-control" value={this.state.firstName} onChange={this.handleChange} /><br />
         Last name: <input type="text" name="lastName" class="form-control" value={this.state.lastName} onChange={this.handleChange} /><br />
         Username: <input type="text" name="username" class="form-control" value={this.state.username} onChange={this.handleChange} /><br />
         Password: <input type="password" name="password" class="form-control" value={this.state.password} onChange={this.handleChange} /><br />
         Confirm Password: <input type="password" class="form-control" name="confirmPassword" value={this.state.confirmPassword} onChange={this.handleChange} /><br />
-        Email: <input type="text" name="email" class="form-control" value={this.state.email} onChange={this.handleChange}/><br />
-        ClassId: <input type="text" name="classId" class="form-control" value={this.state.classId} onChange={this.handleChange} /><br />
-        <button type="submit" className="btn-success" onClick={this.signupUser}>Sign up</button>
+        Are you a:  <div className="btn-group btn-group-toggle" data-toggle="buttons">
+                        <input type="radio" className="check" name="options" id="option2" autocomplete="off" /> Teacher? 
+                        <input type="radio" className="check" name="options" id="option3" autocomplete="off" /> Student?
+                    </div>
+                    <br></br>
+        What is your Schedule?: <form action="#">
+                                    <fieldset>
+                                    <p>
+                                    <br></br>
+                                        <select id="myClass">
+                                            <option value="1">Mon/Wed/Sat</option>
+                                            <option value="2">Tue/Thu/Sat</option>
+                                        </select>
+                                    </p>
+                                    </fieldset>
+                                </form>
+        <button type="submit" className="btn-dark" onClick={this.signupUser}>Sign up</button>
         </form>
         <br/>
         <div class="alert alert-danger" role="alert" hidden={!this.state.badPassword}>
