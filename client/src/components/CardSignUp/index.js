@@ -63,8 +63,8 @@ class CardSignUp extends React.Component {
                     Password: <input type="password" name="password" class="form-control" value={this.state.password} onChange={this.handleChange} /><br />
                     Confirm Password: <input type="password" class="form-control" name="confirmPassword" value={this.state.confirmPassword} onChange={this.handleChange} /><br />
                     Are you a:  <div className="btn-group btn-group-toggle" data-toggle="buttons">
-                        <input type="radio" className="check" name="options" id="option2" autocomplete="off" /> Teacher?
-                        <input type="radio" className="check" name="options" id="option3" autocomplete="off" /> Student?
+                        <input type="radio" className="check" name="options" id="option1" autocomplete="off" /> Teacher?
+                        <input type="radio" className="check" name="options" id="option2" autocomplete="off" /> Student?
                     </div>
                     <br></br>
                     What is your Schedule?: <form action="#">
