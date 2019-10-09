@@ -11,8 +11,16 @@
     background-color: #E3F2FD;
     font-family: 'Press Start 2P', cursive;
 }
+.btn:hover{
+    color: #ff7043;
+}
 #playbtn {
-    -webkit-appearance: none
+    -webkit-appearance: none;
+    color:  #F4511E;
+}
+#playbtn:hover {
+    cursor: pointer;
+   color: #ff7043;
 }
 
 .btn-dark {
@@ -29,3 +37,4 @@
     color: #FFCCBC;
     border-color: #1565C0;
 }
+
