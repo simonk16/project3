@@ -20,9 +20,9 @@ function TCard() {
                   </Link>
                   </Col>
                   <Col size="md-4" className="statsbtn">
-                  <Link to="/stats">
+                  {/* <Link to="/stats"> */}
                   <StatsBtn />
-                  </Link>
+                  {/* </Link> */}
                   </Col>
                 </Row>
         </div>
