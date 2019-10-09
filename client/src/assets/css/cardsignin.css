@@ -19,7 +19,7 @@ body {
     border-radius: 5px;
 
 }
-a {
+a, .form-group {
     color: #E3F2FD;
     font-size: 20px;
     font-weight: bold;

@@ -191,7 +191,7 @@ export function StatsBtn(props) {
     return (
         <div className="formbtns">
             <button {...props} type="submit" className="btn">{props.children}
-                Standings
+                Statistics
                 </button>
         </div>
     );
