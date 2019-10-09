@@ -1,7 +1,7 @@
 import React from "react";
 import fakestats from "../../assets/images/fakestats.png";
 import { Container, Row, Col } from "../Grid/index";
-import "../../assets/css/stats.css";
+import { RosterBtn, PlayBtn, StatsBtn } from "../Form/form";
 // import { ResponsiveBar } from "@nivobar"; 
 
 // make sure parent container have a defined height when using
@@ -107,17 +107,26 @@ import "../../assets/css/stats.css";
 
 function ClassStats(){
     return (
-        // <Container fluid>
-            <div>
-            <Row>
-                <Col size="lg-3"/>
-                <Col size="lg-6">
-                <img className="chart" id="chart" src={fakestats} />
+        <Container>
+            <Row noGutters>
+                <Col size="md-3"/>
+                <Col size="md-6">
+                <img id="chart" src={fakestats} />
                 </Col>
-                <Col size="lg-3"/>
+                <Col size="md-3"/>
             </Row>
-        </div>
-        // </Container>
+            <Row noGutters>
+                <Col size="md-3">
+                    <RosterBtn />
+                </Col>
+                <Col size="md-6">
+                <PlayBtn />
+                </Col>
+                <Col size="md-3">
+                    <StatsBtn/>
+                </Col>
+            </Row>
+        </Container>
         
     );
 }

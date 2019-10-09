@@ -1,6 +1,24 @@
 #chart{
     align-content: center;
     width: auto;
-    height: 75%;
-    padding: 0px 10px 25px 50px;
+    height: auto;
+    padding:10px 10px 10px 10px;
+}
+.row-fluid {
+    margin-top: 50px;
+    align-content: center;
+    vertical-align: middle
+}
+element.style {
+    height: 450px;
+    clear: both;
+    /* padding-top: 120px; */
+    text-align: center;
+}
+.container{
+    align-content: center;
+    vertical-align: middle;
+    margin-right: 250px;
+    width: 1030px;
+    height: 320px;
 }
