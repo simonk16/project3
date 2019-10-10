@@ -3,7 +3,7 @@ import vishu from "../assets/images/vishu.png"
 import "../assets/css/nav.css"
 
 const VishuHooks = (props) => {
-    const [wisdom, setWisdom] = useState("<--- Click on Vishu for some motivation")
+    const [wisdom, setWisdom] = useState("Click on me for some motivation!")
     
     const handleClick = () => {
         let wisdomArr = [
