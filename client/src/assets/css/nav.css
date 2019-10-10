@@ -10,14 +10,16 @@ html {
   }
 
   #img {
-      margin-top: 15px;
+      /* margin-top: 15px */
+      height: 50px;
+      width: 50px;;
   }
 
   /* Style the header links */
   .header img {
     float: left;
     text-align: center;
-    padding: 12px;
+    /* padding: 12px; */
     margin-right: 15px;
     text-decoration: none;
     font-size: 18px;
