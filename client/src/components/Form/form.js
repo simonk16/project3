@@ -147,36 +147,51 @@ export function ClassDrop() {
 }
 
 export function TDrop1(props) {
+    const classRoster = (e) => {
+        let oldState = this.state
+        oldState.selectedClass = e.target.value
+        this.setState(oldState)
+        console.log(this.state.selectedClass)
+        const selectedClass = this.state.selectedClass
+        console.log(selectedClass)
+        if (selectedClass === "3") {
+            Axios.get("/api/students").then(response => {
+                const oldState = this.state 
+                oldState.students = response.data
+                this.ListeningStateChangedEvent(oldState)
+                console.log(this.state.students)
+            }).catch(err => {
+                console.log(err)
+            })
+        } else {
+            Axios.get("/api/students/findStudentsByClass/" + selectedClass).then(response => {
+                console.log(response);
+                const oldState = this.state
+                oldState.students = response.data
+                this.setState(oldState)
+                console.log(this.state.students)
+            }).catch(err => {
+                console.log(err)
+            })
+        }
+    }
+    
     return (
         <form action="#">
             <fieldset>
                 <legend>Choose your Class</legend>
                 <br></br>
-                <select id="teacherClass1">
+                <select classRoster = {classRoster} name = "selectedClass" id="teacherClass1">
                     <option value="default">Select...</option>
-                    <option value="1">Tue/Thu</option>
-                    <option value="2">Sat</option>
+                    <option name = "selectedClass" value="1">Mon/Wed</option>
+                    <option name = "selectedClass" value="2">Tue/Thu</option>
+                    <option name = "selectedClass" value="3">Sat</option>
                 </select>
             </fieldset>
         </form>
     );
 }
 
-export function TDrop2(props) {
-    return (
-        <form action="#">
-            <fieldset>
-                <legend>Choose your Class</legend>
-                <br></br>
-                <select id="teacherClass2">
-                    <option value="default">Select...</option>
-                    <option value="1">Mon/Wed</option>
-                    <option value="2">Sat</option>
-                </select>
-            </fieldset>
-        </form>
-    )
-}
 
 
 export class RosterBtn extends React.Component {

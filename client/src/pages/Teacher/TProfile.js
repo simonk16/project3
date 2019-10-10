@@ -14,6 +14,15 @@ import VishuHooks from "../../components/VishuHooks";
 
 
 class TProfile extends Component {
+  
+  state = {
+    students: [],
+    selectedClass: ""
+}
+
+
+
+
   render() {
     return (
       <div>
@@ -23,7 +32,7 @@ class TProfile extends Component {
           <Row fluid>
             <Col size="md-12">
               <Jumbotron>
-                
+
                 <br></br>
                 <TCard />
                 <br></br>

@@ -1,24 +1,52 @@
 html,
 body {
     background: url("../../assets/images/background.png") no-repeat center center fixed !important;
+    height: 100% !important;
+    width: 100% !important;
 }
 
 .userCard {
-    margin-top: 45px;
-    margin-left: 30px !important;
+    height: 769px !important;
+    width: 500px !important;
+    margin-top: -16px;
+    margin-bottom: 0 !important;
+    /* margin-right: -167px !important; */
     background: #1848A0;
-    position: relative;
     display: flex;
-    
-    justify-content: center !important;
+    justify-content: flex-end !important;
     flex-direction: column;
     padding: 25px 30px 25px 30px !important;
-    box-shadow: 0 4px 8px 0 rgba(0, 3, 3, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 #E3F2FD (0, 3, 3, 0.2), 0 6px 20px 0 #E3F2FD(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 #E3F2FD(0, 0, 0, 0.2), 0 6px 20px 0 #E3F2FD(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 #E3F2FD(0, 0, 0, 0.2), 0 6px 20px 0 #E3F2FD(0, 0, 0, 0.19);
     border-radius: 5px;
 
 }
+.brand_logoContainer {
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    top: -10px;
+    padding: 3px 3px 3px 1px;
+    text-align: center;
+}
+
+.brandLogo {
+    height: 170px;
+    width: 230px;
+    margin-left: -36px; 
+    margin-top: 60px;
+}
+
+strong {
+    padding-top: 15px;
+}
+
+.container-fluid {
+    margin-bottom: 250px;
+}
+
+
 a, .form-group {
     color: #E3F2FD;
     font-size: 20px;
