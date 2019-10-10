@@ -36,7 +36,8 @@ passport.use(
                 password: hashedPassword,
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
-                ClassId: req.body.ClassId
+                ClassId: req.body.ClassId,
+                isStudent: req.body.isStudent
               }).then(user => {
                 console.log('user created');
                 return done(null, user);
