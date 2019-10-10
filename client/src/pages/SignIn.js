@@ -3,7 +3,7 @@ import Axios from "axios";
 import { Redirect, NavLink } from "react-router-dom";
 import { Container, Row } from '../components/Grid/index.js';
 import logo from '../assets/images/logo3.png';
-import '../assets/css/cardsignin.css';
+// import '../assets/css/cardsignin.css';
 
 class Login extends React.Component {
     constructor(props) {

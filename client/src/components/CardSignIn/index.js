@@ -52,7 +52,7 @@ class Login extends React.Component {
                             <div class="form-group">
                                 Password: <input type="password" class="form-control" name="password" value={this.state.password} onChange={this.handleChange} />
                             </div>
-                            <button type="submit" class="btn btn-success" onClick={this.loginUser}>Login</button>
+                            <button type="submit" class="btn btn-light" onClick={this.loginUser}>Login</button>
                             <NavLink to="/signup"> Signup </NavLink>
                         </div>
                     </form >
