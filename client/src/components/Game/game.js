@@ -86,7 +86,7 @@ export default class game extends Component {
                     }
                });
             }
- 
+
             if (isStudentPresent) {
                 console.log("Already guesed right: ", students[randomIndex])
                 return getRandom()
