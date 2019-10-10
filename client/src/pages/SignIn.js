@@ -1,7 +1,7 @@
 import React from "react";
 import Axios from "axios";
 import { Redirect, NavLink } from "react-router-dom";
-import { Container, Row } from '../Grid/index.js';
+import { Container, Row } from '../components/Grid/index.js';
 import logo from '../assets/images/logo3.png';
 import '../assets/css/cardsignin.css';
 

@@ -3,7 +3,7 @@ import API from '../../utils/API'
 import Axios from 'axios';
 import '../../assets/css/game.css';
 import Nav from '../Nav/nav';
-import Footer from '../Footer/footer';
+
 
 export default class game extends Component {
     state = {

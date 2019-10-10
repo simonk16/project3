@@ -11,8 +11,16 @@
     background-color: #E3F2FD;
     font-family: 'Press Start 2P', cursive;
 }
+.btn:hover{
+    color: #ff7043;
+}
 #playbtn {
-    -webkit-appearance: none
+    -webkit-appearance: none;
+    color:  #F4511E;
+}
+#playbtn:hover {
+    cursor: pointer;
+   color: #ff7043;
 }
 
 .btn-dark {
@@ -30,14 +38,3 @@
     border-color: #1565C0;
 }
 
-/* input[type="radio"].check:checked + label::before {
-    content: "•";
-    color: #F4511E;
-    background-color: #FFCCBC;
-}
-
-input[type="radio"].check:checked + label::after {
-    content: "•";
-    color: #1565C0;
-    background-color: #BBDEFB;
-} */

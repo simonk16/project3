@@ -210,9 +210,9 @@ export function RosterBtn(props, state) {
 
 export function StatsBtn(props) {
     return (
-        <div>
+        <div className="formbtns">
             <button {...props} type="submit" className="btn">{props.children}
-                Standings
+                Statistics
                 </button>
         </div>
     );
@@ -224,8 +224,6 @@ export function PlayBtn(props) {
         <div>
             <FontAwesomeIcon
                 icon={faPlayCircle} size="4x" id="playbtn" type="submit">
-                {/* {...props} >{props.children}  */}
-                Play
             </FontAwesomeIcon>
         </div>
     );
