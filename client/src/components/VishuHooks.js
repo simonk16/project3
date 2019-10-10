@@ -29,6 +29,8 @@ const VishuHooks = (props) => {
     return (
         <div>
             <img className="vishu" type="button" src={vishu} onClick={handleClick} alt="wisdom" />
+            <br></br>
+            <br></br>
             <p>Vishu says: {wisdom}</p>
         </div>
     )
