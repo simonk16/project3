@@ -12,31 +12,7 @@ import VishuHooks from "../VishuHooks";
 
 
 class Nav extends React.Component {
-    // state = {
-    //     wisdom: ""
-    // }
-
-    // wisdom = () => {
-    //     let wisdomArr = [
-    //         "Here's another beauty",
-    //         "When's a good time to debug? Always",
-    //         "Who's been debugging?",
-    //         "Dude",
-    //         "Excellent question",
-    //         "Claps",
-    //         "What is going on here?",
-    //         "#devlife",
-    //         "I'm married to java but my lover is python",
-    //         "No pain, no gain",
-    //         "Stay hungry, stay foolish",
-    //         "Look into my eyes, I believe in you",
-    //     ]
-    //     const randomIndex = Math.floor(Math.random() * wisdomArr.length);
-    //     const item = wisdomArr[randomIndex];
-    //     this.setState({
-    //         wisdom: item
-    //     })
-    // }
+    
     render() {
         return(
             <div className="header">

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import vishu from "../assets/images/vishu.png"
+import "../assets/css/nav.css"
 
 const VishuHooks = (props) => {
     const [wisdom, setWisdom] = useState("<--- Click on Vishu for some motivation")
