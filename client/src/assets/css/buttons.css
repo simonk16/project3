@@ -1,7 +1,7 @@
 .btn {
     position: inherit;
     margin-bottom: 10px;
-    /* width: 100px; */
+    width: 100px;
     height: 37px;
     border-radius: 8px;
     box-shadow: 10px 10px 5px #1565C0;
@@ -29,3 +29,15 @@
     color: #FFCCBC;
     border-color: #1565C0;
 }
+
+/* input[type="radio"].check:checked + label::before {
+    content: "•";
+    color: #F4511E;
+    background-color: #FFCCBC;
+}
+
+input[type="radio"].check:checked + label::after {
+    content: "•";
+    color: #1565C0;
+    background-color: #BBDEFB;
+} */

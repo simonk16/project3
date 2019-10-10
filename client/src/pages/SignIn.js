@@ -1,6 +1,9 @@
 import React from "react";
 import Axios from "axios";
 import { Redirect, NavLink } from "react-router-dom";
+import { Container, Row } from '../Grid/index.js';
+import logo from '../assets/images/logo3.png';
+import '../assets/css/cardsignin.css';
 
 class Login extends React.Component {
     constructor(props) {
@@ -34,8 +37,9 @@ class Login extends React.Component {
 
     render() {
         if (!this.state.loggedIn) {
-            return <div className="container" className="d-flex justify-content-end">
-                <form className="userCard2">
+            return (
+            <div className="container" className="d-flex justify-content-end">
+                <form className="userCard">
                     <div class="d-flex justify-content-center">
                         <div class="brand_logo_container">
                             <img src={logo} class="brand_logo" alt="Logo" />
@@ -51,12 +55,12 @@ class Login extends React.Component {
                     <NavLink to="/signup"> Signup </NavLink>
                 </form>
             </div>
+            );
         }
         else {
             return <Redirect to={{ pathname: "/student", state: { loggedIn: true } }} />
         }
     }
-
 }
 
 export default Login;

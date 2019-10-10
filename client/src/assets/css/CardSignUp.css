@@ -1,8 +1,15 @@
+html,
+body {
+    background: url("../../assets/images/background.png") no-repeat center center fixed !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+
 .userCard2 {
     height: 752px !important;
     width: 500px !important;
     margin-top: -16px;
-    margin-bottom: -16px;
+    margin-bottom: 0 !important;
     margin-right: -167px;
     background: #1848A0;
     display: flex;
@@ -43,5 +50,5 @@ strong {
 .brand_logo {
     height: 170px;
     width: 230px;
-    margin-left: -36px;
+    margin-left: -36px; 
 }

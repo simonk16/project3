@@ -65,8 +65,8 @@ app.post('/loginUser', (req, res, next) => {
         res.status(403).send(info.message);
       }
     } else {
-      User.findOne({
-        username: req.body.username
+      db.Student.findOne({
+        userName: req.body.username
       }).then(user => {
         const token = jwt.sign({
           id: user.id
@@ -83,6 +83,7 @@ app.post('/loginUser', (req, res, next) => {
   })(req, res, next);
 });
 
+  
 app.use(routes);
 
 

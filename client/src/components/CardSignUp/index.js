@@ -1,32 +1,53 @@
 import React from "react";
 import { Redirect } from "react-router-dom"
 import '../../assets/css/CardSignUp.css';
+import '../../assets/css/buttons.css';
 import logo from '../../assets/images/logo3.png';
 import Axios from "axios"
 
 class CardSignUp extends React.Component {
+
     constructor(props) {
         super(props)
         this.state = {
             username: "",
             password: "",
             confirmPassword: "",
-            email: "",
             signedUp: false,
             badPassword: false,
             firstName: "",
             lastName: "",
-            classId: ""
+            classId: "",
+            isStudent: 0
         }
     }
 
     handleChange = (event) => {
+        console.log("executed line 24");
         this.setState({
             [event.target.name]: event.target.value,
         });
     };
 
-    signupUser = (event) => {
+    handleChangeForUserType = e => {
+        const oldState = this.state;
+        if(e === 1) {
+            oldState.isStudent = "True";
+        }else{
+            oldState.isStudent = "False";
+        }
+        console.log(oldState);
+        this.setState(oldState)
+    }
+
+    handleChangeForSchedule = e => {
+    console.log("executed line 24");  
+    const oldState = this.state;
+    oldState.classId = e.target.value
+    this.setState(oldState)
+    }
+
+    signupUser = (event)=>{
         event.preventDefault();
         if (this.state.password !== this.state.confirmPassword) {
             this.setState({ badPassword: true })
@@ -45,52 +66,66 @@ class CardSignUp extends React.Component {
                 console.log(err)
             })
         }
+        
     }
+    
+    
+    render(){
+        if(!this.state.signedUp) {
+        return (
 
+            <div className="container" className="d-flex justify-content-end">
 
-    render() {
-        if (!this.state.signedUp) {
-            return <div className="container" className="d-flex justify-content-end">
-                <form className="userCard2">
+                <form className= "userCard2">
                     <div class="d-flex justify-content-center">
                         <div class="brand_logo_container">
-                            <img src={logo} class="brand_logo" alt="Logo" />
+                                <img src={ logo } class="brand_logo" alt="Logo" />
                         </div>
                     </div>
-                    First name: <input type="text" name="firstName" class="form-control" value={this.state.firstName} onChange={this.handleChange} /><br />
-                    Last name: <input type="text" name="lastName" class="form-control" value={this.state.lastName} onChange={this.handleChange} /><br />
-                    Username: <input type="text" name="username" class="form-control" value={this.state.username} onChange={this.handleChange} /><br />
-                    Password: <input type="password" name="password" class="form-control" value={this.state.password} onChange={this.handleChange} /><br />
-                    Confirm Password: <input type="password" class="form-control" name="confirmPassword" value={this.state.confirmPassword} onChange={this.handleChange} /><br />
-                    Are you a:  <div className="btn-group btn-group-toggle" data-toggle="buttons">
-                        <input type="radio" className="check" name="options" id="option1" autocomplete="off" /> Teacher?
-                        <input type="radio" className="check" name="options" id="option2" autocomplete="off" /> Student?
-                    </div>
-                    <br></br>
-                    What is your Schedule?: <form action="#">
-                        <fieldset>
-                            <p>
-                                <br></br>
-                                <select id="myClass">
-                                    <option value="1">Mon/Wed/Sat</option>
-                                    <option value="2">Tue/Thu/Sat</option>
-                                </select>
-                            </p>
-                        </fieldset>
-                    </form>
-                    <button type="submit" className="btn-dark" onClick={this.signupUser}>Sign up</button>
+                    
+                First name: <input type="text" name="firstName" class="form-control" value={this.state.firstName} onChange={this.handleChange} /><br />
+                Last name: <input type="text" name="lastName" class="form-control" value={this.state.lastName} onChange={this.handleChange} /><br />
+                Username: <input type="text" name="username" class="form-control" value={this.state.username} onChange={this.handleChange} /><br />
+                Password: <input type="password" name="password" class="form-control" value={this.state.password} onChange={this.handleChange} /><br />
+                Confirm Password: <input type="password" class="form-control" name="confirmPassword" value={this.state.confirmPassword} onChange={this.handleChange} /><br />
+                
+                {/* Are you a:  <div className="btn-group btn-group-toggle" data-toggle="buttons" onChange={this.handleChangeForUserType}>
+                    
+                    <input type="radio"  value="0" className="check" name="options" id="option1" autocomplete="off" /> Teacher?
+                    <input type="radio"  value="1" className="check" name="options" id="option2" autocomplete="off" /> Student?
+                </div> */}
+                Are you a:  <div className="btn-group btn-group-toggle" data-toggle="buttons"></div>
+                <form>
+                    <fieldset id="group1">
+                        <input type="radio" value="value1" name="group1" onChange={() => this.handleChangeForUserType(0)} /> Teacher?
+                        <input type="radio" value="value2" name="group1" onChange={() => this.handleChangeForUserType(1)} /> Student?
+                    </fieldset>
                 </form>
-                <br />
-                <div className="alert alert-warning alert-dismissible fade show" role="alert" hidden={!this.state.badPassword}>
-                    <strong>Passwords don't match!</strong>
-                    <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                <br></br>
+
+                What is your Schedule?: 
+                <form>
+                    <fieldset>
+                    <p>
+                    <br></br>
+                        <select id="myClass" onChange={this.handleChangeForSchedule}>
+                            <option value="1">Mon/Wed/Sat</option>
+                            <option value="2">Tue/Thu/Sat</option>
+                        </select>
+                    </p>
+                    </fieldset>
+                </form>
+                
+                <h1>is student: {String(this.state.isStudent)}</h1>
+                <h2>ClassId: {this.state.classId}</h2>
+                <button type="submit" className="btn-dark" onClick={this.signupUser}>Sign up</button>
+                </form>
+                <br/>
+                <div class="alert alert-danger" role="alert" hidden={!this.state.badPassword}>
+                    Passwords don't match!
                 </div>
             </div>
-        }
-        else {
-            return <Redirect to="/" />
+        )
         }
     }
 }
