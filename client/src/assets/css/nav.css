@@ -67,9 +67,7 @@ html {
     margin-top: 13px;
     cursor: pointer;
   }
-  p{
-    
-  }
+  
   /* Float the link section to the right */
   .header-right {
     float: right;
