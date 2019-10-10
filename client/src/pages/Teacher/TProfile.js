@@ -9,6 +9,7 @@ import Jumbotron from "../../components/Jumbotron/jumbotron.js";
 import Nav from "../../components/Nav/nav.js";
 
 import TCard from "../../components/TCard/TCard.js";
+import VishuHooks from "../../components/VishuHooks";
 
 
 
@@ -30,6 +31,7 @@ class TProfile extends Component {
             </Col>
           </Row>
         {/* </Container> */}
+       
       </div>
     );
   }
