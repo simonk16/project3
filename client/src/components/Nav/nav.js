@@ -38,10 +38,7 @@ class Nav extends React.Component {
     }
     render() {
         return(
-            <div className="header-right">
-                <Link to="/teacher">
-                <img className="raise" id="img" type="button" src={homeImg} alt="home" />
-                </Link>
+            <div className="header">
                 <Link to="/">
                     <img className="logo" type="button" src={logoImg} alt="pickulogo" />
                 </Link>
