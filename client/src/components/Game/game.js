@@ -73,8 +73,21 @@ export default class game extends Component {
 
         const getRandom = () => {
             const randomIndex = Math.floor(Math.random() * students.length)
+            if(students.length === this.state.chosenStudents.length) {
+                this.setState({
+                    chosenStudents: []
+                })
+            }
+            let isStudentPresent = false
+            if (this.state.chosenStudents.length !== 0 ) {
+                this.state.chosenStudents.forEach(element => {
+                    if(element.id === students[randomIndex].id){
+                        isStudentPresent = true
+                    }
+               });
+            }
 
-            if (students[randomIndex].answerCorrect) {
+            if (isStudentPresent) {
                 console.log("Already guesed right: ", students[randomIndex])
                 return getRandom()
             } else {
@@ -83,6 +96,12 @@ export default class game extends Component {
         }
         const randomIndex = getRandom()
         const item = students[randomIndex];
+
+        //creating a new array with chosen students and setting them to the state
+        let newChosenStudents = this.state.chosenStudents.concat(item)
+        this.setState({
+            chosenStudents : newChosenStudents
+        })
 
         console.log(item, randomIndex, students)
         // console.log("line 26 code on game.js has chosen " + item.firstName);
@@ -122,13 +141,7 @@ export default class game extends Component {
         })
     }
 
-    wrongFunc = () => {
-        let newScore = this.state.points - 1;
-        this.setState({
-            points: newScore
-        });
 
-    }
 
 
     render() {
@@ -168,7 +181,7 @@ export default class game extends Component {
                         <div class="card-body">
                             <h5 class="card-title">List of Students</h5>
                             <ul>
-                                {this.state.students.map(student => { return <li>{student.firstName}</li> })}
+                                {this.state.students.map(student => { return <li>{student.firstName + " " + student.lastName + " " + student.points}</li> })}
                             </ul>
                         </div>
                     </div>
