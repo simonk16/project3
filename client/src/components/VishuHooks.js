@@ -35,4 +35,4 @@ const VishuHooks = (props) => {
         </div>
     )
 }
-export default VishuHooks
+export default VishuHooks;
