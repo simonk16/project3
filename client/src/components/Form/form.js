@@ -4,9 +4,8 @@ import "../../assets/css/buttons.css";
 import { Container, Row } from '../Grid/index.js';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlayCircle } from "@fortawesome/free-regular-svg-icons";
-import {Redirect, NavLink} from "react-router-dom";
+import { Redirect, NavLink } from "react-router-dom";
 import Axios from "axios";
-
 
 
 
@@ -194,18 +193,56 @@ export function TDrop1(props) {
 }
 
 
-export function RosterBtn(props, state) {
-    
-    
-    
-    
-    return (
-        <div>
-            <button {...props} type="button" className="btn" data-toggle="popover" data-placement="top" data-content= " " title="Popover title"> {props.children} 
-            Roster
+
+export class RosterBtn extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            classRoster: []
+        }
+    }
+
+    rosterGet = () => {
+        Axios.get("/api/students/findStudentsByClass/2").then(response => {
+            console.log(response)
+            const tTh = response.data
+            this.setState({
+                classRoster: tTh
+            })
+        }).catch(err => {
+            console.log(err)
+        })
+
+    }
+
+    render() {
+        return (
+            <div className="formbtns">
+                <button type="button" className="btn" data-toggle="modal" title="Popover title" data-target="#rosterModal" aria-hidden="true">
+                    Roster
             </button>
-        </div>
-    );
+                <div class="modal fade" id="rosterModal" tabindex="-1" role="dialog" aria-labelledby="rosterModal" >
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <ul></ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 }
 
 export function StatsBtn(props) {

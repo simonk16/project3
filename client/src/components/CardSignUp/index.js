@@ -109,8 +109,8 @@ class CardSignUp extends React.Component {
                     <p>
                     <br></br>
                         <select id="myClass" onChange={this.handleChangeForSchedule}>
-                            <option value="1">Mon/Wed/Sat</option>
-                            <option value="2">Tue/Thu/Sat</option>
+                            <option value="2">Mon/Wed/Sat</option>
+                            <option value="1">Tue/Thu/Sat</option>
                         </select>
                     </p>
                     </fieldset>
