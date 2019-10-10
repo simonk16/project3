@@ -44,6 +44,8 @@ class Nav extends React.Component {
                 </Link>
                 <div className="header-center">
                     <img className="vishu" type="button" src={vishu} onClick={this.wisdom} alt="wisdom" />
+                    <br></br>
+                    <br></br>
                     <p>Vishu says: {this.state.wisdom}</p>
                 </div>
 
