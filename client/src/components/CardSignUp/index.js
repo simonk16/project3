@@ -94,7 +94,7 @@ class CardSignUp extends React.Component {
                                     </p>
                                     </fieldset>
                                 </form>
-                                <h1>is student: {String(this.state.isStudent)}</h1>
+                                {/* <h1>is student: {String(this.state.isStudent)}</h1> */}
                                 <h2>ClassId: {this.state.classId}</h2>
         <button type="submit" className="btn-dark" onClick={this.signupUser}>Sign up</button>
         </form>
