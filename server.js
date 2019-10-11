@@ -65,20 +65,38 @@ app.post('/loginUser', (req, res, next) => {
         res.status(403).send(info.message);
       }
     } else {
-      db.Student.findOne({
-        userName: req.body.username
-      }).then(user => {
-        const token = jwt.sign({
-          id: user.id
-        }, jwtSecret.secret, {
-          expiresIn: 60 * 60,
+      if (req.body.isStudent === 1) {
+        db.Student.findOne({
+          userName: req.body.username
+        }).then(user => {
+          const token = jwt.sign({
+            id: user.id
+          }, jwtSecret.secret, {
+            expiresIn: 60 * 60,
+          });
+          res.status(200).send({
+            auth: true,
+            token,
+            message: 'user found & logged in',
+          });
         });
-        res.status(200).send({
-          auth: true,
-          token,
-          message: 'user found & logged in',
+      } else {
+        db.Teacher.findOne({
+          username: req.body.username
+        }).then(user => {
+          const token = jwt.sign({
+            id: user.id
+          }, jwtSecret.secret, {
+            expiresIn: 60 * 60,
+          });
+          res.status(200).send({
+            auth: true,
+            token,
+            message: 'user found & logged in',
+          });
         });
-      });
+      }
+      
     }
   })(req, res, next);
 });

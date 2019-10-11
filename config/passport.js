@@ -100,7 +100,7 @@ passport.use(
           if (user === null) {
             db.Teacher.findOne({
               where: {
-                userName: username
+                username: username
               }
             }).then(user => {
               if (user === null) {
