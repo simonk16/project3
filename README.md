@@ -1,3 +1,10 @@
-# project3
+# PickU
+   A competitive game to encourage participation in the classroom.
+   
+## Built With
+React - The web framework used      
+Passport - User Authentication
 
-Ben Flippen, Rachel Givens, Simon Kraus, and Rachel Harrison
+## Authors
+
+Simon Kraus, Rachel Harrison, Ben Flippen, and Rachel Givens
