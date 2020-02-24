@@ -41,13 +41,32 @@ body {
 strong {
     padding-top: 15px;
 }
+.brand_logoContainer {
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    top: -10px;
+    padding: 3px 3px 3px 1px;
+    text-align: center;
+}
+
+.brandLogo {
+    height: 170px;
+    width: 230px;
+    margin-left: -36px; 
+    margin-top: 60px;
+}
+
+strong {
+    padding-top: 15px;
+}
 
 .container-fluid {
     margin-bottom: 250px;
 }
 
-a,
-.form-group {
+
+a, .form-group {
     color: #E3F2FD;
     font-size: 20px;
     font-weight: bold;

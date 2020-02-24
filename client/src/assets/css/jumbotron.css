@@ -1,4 +1,26 @@
+<<<<<<< HEAD
+/* .jumbo {
+    position: fixed;
+    background-color: #42a5f5 !important;
+    overflow: hidden;
+    left: 0;
+    margin-top: 20px !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .content {
+      height: 1000px !important;
+      background-color: #42a5f5 !important; 
+      background: white !important;
+  }
+  .container{
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  } */
+
+ 
+=======
+>>>>>>> origin/master
   .jumbotron {
     background-color: #E3F2FD;
-    font-family: 'Press Start 2P', cursive;
   }
