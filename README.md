@@ -1,7 +1,7 @@
 # PickU
    A competitive game to encourage participation in the classroom.
 
-**[Deployed Heroku link](https://new-girl.herokuapp.com)**
+**[Deployed Heroku link](https://pick-u.herokuapp.com/)**
    
 ## Getting Started
 
